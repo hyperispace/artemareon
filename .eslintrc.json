@@ -1,0 +1,15 @@
+{
+  "extends": ["next", "prettier", "plugin:storybook/recommended"],
+  "plugins": ["prefer-arrow"],
+  "rules": {
+    "prefer-arrow/prefer-arrow-functions": [
+      "warn",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "func-style": ["error", "expression", { "allowArrowFunctions": true }]
+  }
+}
