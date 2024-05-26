@@ -2,6 +2,14 @@ import './App.css';
 import Welcome from './components/Welcome';
 import useScrollToBottom from './hooks/useScrollToBottom';
 
+/**
+ * Push your sections into this array
+ * `classes`: section specific class name
+ * `component`: the content component to put in section
+ *    component itself doesn't need `<section>` element,
+ *    cause we'll have this component wrapped into a `<section>` element.
+ *    e.g. the <Welcome /> component
+ */
 const sections = [
   {
     classes: 'bg-gray-300',
@@ -24,6 +32,7 @@ const sections = [
 
 const App = () => {
   useScrollToBottom();
+
   return (
     <>
       {sections.map(({ classes, component }, index) => (
