@@ -1,6 +1,6 @@
 import './App.css';
 import Welcome from './components/Welcome';
-import useWelcome from './hooks/useWelcome';
+import useScrollToBottom from './hooks/useScrollToBottom';
 
 const sections = [
   {
@@ -23,7 +23,7 @@ const sections = [
 ];
 
 const App = () => {
-  useWelcome();
+  useScrollToBottom();
   return (
     <>
       {sections.map(({ classes, component }, index) => (

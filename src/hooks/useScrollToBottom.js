@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useWelcome = () => {
+const useScrollToBottom = () => {
   useEffect(() => {
     window.scrollTo({
       top: document.body.scrollHeight,
@@ -12,4 +12,4 @@ const useWelcome = () => {
   return [];
 };
 
-export default useWelcome;
+export default useScrollToBottom;
