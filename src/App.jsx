@@ -1,7 +1,6 @@
 import './App.css';
 import Sample from './components/Sample';
 import Welcome from './components/Welcome';
-import useScrollToBottom from './hooks/useScrollToBottom';
 
 /**
  * Push your sections into this array
@@ -32,14 +31,12 @@ const sections = [
 ];
 
 const App = () => {
-  const [isLoaded] = useScrollToBottom();
-
   return (
     <>
       <Welcome />
       {sections.map(({ classes, component }, index) => (
         <section key={index} className={`w-full h-full ${classes}`}>
-          {isLoaded && component}
+          {component}
         </section>
       ))}
     </>
