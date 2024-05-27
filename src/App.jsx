@@ -1,5 +1,6 @@
 import './App.css';
 import Sample from './components/Sample';
+import StarsCanvas from './components/StarsCanvas/StarsCanvas';
 import Welcome from './components/Welcome';
 import useScrollToBottom from './hooks/useScrollToBottom';
 
@@ -13,15 +14,18 @@ import useScrollToBottom from './hooks/useScrollToBottom';
  */
 const sections = [
   {
-    classes: 'bg-gray-300',
+    classes:
+      ' text-white text-5xl border-[1px] flex justify-center items-center',
     component: <>Section Gray 100</>,
   },
   {
-    classes: 'bg-gray-600',
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
     component: <>Section Gray 400</>,
   },
   {
-    classes: 'bg-gray-800',
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
     component: <>Section Gray 800</>,
   },
   {
@@ -36,6 +40,7 @@ const App = () => {
 
   return (
     <>
+      <StarsCanvas />
       <Welcome />
       {sections.map(({ classes, component }, index) => (
         <section key={index} className={`w-full h-full ${classes}`}>
