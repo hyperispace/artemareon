@@ -1,4 +1,5 @@
 import './App.css';
+import Sample from './components/Sample';
 import Welcome from './components/Welcome';
 import useScrollToBottom from './hooks/useScrollToBottom';
 
@@ -8,7 +9,7 @@ import useScrollToBottom from './hooks/useScrollToBottom';
  * `component`: the content component to put in section
  *    component itself doesn't need `<section>` element,
  *    cause we'll have this component wrapped into a `<section>` element.
- *    e.g. the <Welcome /> component
+ *    e.g. the <Sample /> component
  */
 const sections = [
   {
@@ -26,18 +27,19 @@ const sections = [
   {
     classes:
       'bg-gray-900 flex flex-col justify-center items-center bg-black text-white',
-    component: <Welcome />,
+    component: <Sample />,
   },
 ];
 
 const App = () => {
-  useScrollToBottom();
+  const [isLoaded] = useScrollToBottom();
 
   return (
     <>
+      <Welcome />
       {sections.map(({ classes, component }, index) => (
         <section key={index} className={`w-full h-full ${classes}`}>
-          {component}
+          {isLoaded && component}
         </section>
       ))}
     </>
