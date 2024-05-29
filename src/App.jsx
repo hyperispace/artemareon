@@ -2,7 +2,15 @@ import './App.css';
 import Sample from './components/Sample';
 import StarsCanvas from './components/StarsCanvas/StarsCanvas';
 import Welcome from './components/Welcome';
+import Apollo from './scenes/Apollo';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.defaults({
+  markers: true,
+});
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -14,8 +22,8 @@ import Welcome from './components/Welcome';
 const sections = [
   {
     classes:
-      ' text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Section Gray 100</>,
+      ' text-white text-5xl border-[1px] flex justify-center items-center overflow-hidden',
+    component: <Apollo />,
   },
   {
     classes:
