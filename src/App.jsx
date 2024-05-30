@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react';
 import { IoMdRocket } from 'react-icons/io';
 
 import './App.css';
+import Intro from './components/Intro/Intro';
 import Sample from './components/Sample';
 import Sputnik from './components/Sputnik/Sputnik';
 import StarsCanvas from './components/StarsCanvas';
@@ -183,7 +184,8 @@ const App = () => {
   return (
     <>
       <StarsCanvas />
-      <Welcome />
+      {/* <Welcome /> */}
+      <Intro />
       <nav>
         {/* <div className='marker'></div> */}
         <IoMdRocket className='marker' />
