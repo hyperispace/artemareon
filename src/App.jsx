@@ -2,6 +2,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Draggable from 'gsap/Draggable';
 import { useGSAP } from '@gsap/react';
+import { IoMdRocket } from 'react-icons/io';
 
 import './App.css';
 import Sample from './components/Sample';
@@ -9,7 +10,6 @@ import Sputnik from './components/Sputnik/Sputnik';
 import StarsCanvas from './components/StarsCanvas';
 import Welcome from './components/Welcome';
 import { useRef } from 'react';
-
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -20,29 +20,91 @@ import { useRef } from 'react';
  */
 const sections = [
   {
-    event: 'Event 1',
+    title: 'Event 1',
+    isEvent: false,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Section Gray 100</>,
+    component: <>Pre Section</>,
   },
   {
-    event: "Humanity's First Artificial Satellite",
+    title: "Humanity's First Artificial Satellite",
+    isEvent: true,
     classes: 'relative border-[1px] flex flex-col items-start',
     component: <Sputnik />,
   },
   {
-    event: 'Event 3',
+    title: 'Event 2',
+    isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center h-[200vh]',
-    component: <>Section Gray 400</>,
+    component: <>Event 2</>,
   },
   {
-    event: 'Event 4',
+    title: 'Event 3',
+    isEvent: true,
     classes:
       'bg-gray-900 flex flex-col justify-center items-center bg-black text-white',
     component: <Sample />,
   },
-];
+  {
+    title: 'Event 4',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 4</>,
+  },
+  {
+    title: 'Event 5',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 5</>,
+  },
+  {
+    title: 'Event 6',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 6</>,
+  },
+  {
+    title: 'The Lunar',
+    isEvent: true,
+    timeline_picture: './assets/timeline-lunar.png',
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>The Lunar</>,
+  },
+  {
+    title: 'Event 8',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 8</>,
+  },
+  {
+    title: 'Event 9',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 9</>,
+  },
+  {
+    title: 'Event 10',
+    isEvent: true,
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>Event 10</>,
+  },
+  {
+    title: 'The Mars',
+    isEvent: true,
+    timeline_picture: './assets/timeline-mars.png',
+    classes:
+      'text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <>The Mars</>,
+  },
+].map((section, index) => ({ ...section, id: index }));
 
 const generateSectionId = (index) => `section_${index}`;
 
@@ -123,29 +185,38 @@ const App = () => {
       <StarsCanvas />
       <Welcome />
       <nav>
-        <div className='marker'></div>
+        {/* <div className='marker'></div> */}
+        <IoMdRocket className='marker' />
 
         <div ref={trackRef} className='nav__track' data-draggable>
-          {/* <ul className='flex justify-between'> */}
           <ul className='nav__list'>
-            {sections.map(({ event }, index) => (
-              <li key={index}>
-                <a
-                  href={`#${generateSectionId(index)}`}
-                  className='nav__link'
-                  data-link
-                >
-                  <span>{event}</span>
-                </a>
-              </li>
-            ))}
+            {sections
+              .filter(({ isEvent }) => isEvent)
+              .map(({ title, id, timeline_picture }, index) => (
+                <li key={index} className='relative'>
+                  <a
+                    href={`#${generateSectionId(id)}`}
+                    className='nav__link'
+                    data-link
+                  >
+                    <span>{title}</span>
+                  </a>
+                  {timeline_picture && (
+                    <img
+                      src={timeline_picture}
+                      className='absolute top-[-28%] left-[32%] w-12 h-12 z-30'
+                      alt={`Icon of ${title}`}
+                    />
+                  )}
+                </li>
+              ))}
           </ul>
         </div>
       </nav>
       <main className='w-full h-full'>
-        {sections.map(({ classes, component }, index) => (
+        {sections.map(({ classes, component, id }, index) => (
           <section
-            id={generateSectionId(index)}
+            id={generateSectionId(id)}
             key={index}
             className={`${classes}`}
           >
