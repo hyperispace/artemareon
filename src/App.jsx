@@ -1,5 +1,6 @@
 import './App.css';
 import Sample from './components/Sample';
+import Sputnik from './components/Sputnik/Sputnik';
 import StarsCanvas from './components/StarsCanvas/StarsCanvas';
 import Welcome from './components/Welcome';
 
@@ -20,12 +21,12 @@ const sections = [
   {
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Section Gray 400</>,
+    component: <Sputnik />,
   },
   {
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Section Gray 800</>,
+    component: <>Section Gray 400</>,
   },
   {
     classes:
