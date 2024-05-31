@@ -2,6 +2,7 @@ import './App.css';
 import Sample from './components/Sample';
 import StarsCanvas from './components/StarsCanvas/StarsCanvas';
 import Welcome from './components/Welcome';
+import { useEffect, useState } from 'react';
 
 /**
  * Push your sections into this array
@@ -11,20 +12,21 @@ import Welcome from './components/Welcome';
  *    cause we'll have this component wrapped into a `<section>` element.
  *    e.g. the <Sample /> component
  */
-const sections = [
+const sections = (scrollY) => [
   {
-    classes:
-      ' text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: ' text-white text-5xl flex justify-center items-center',
+    component: <Tesla scrollY={scrollY} />,
+  },
+  {
+    classes: ' text-white text-5xl flex justify-center items-center',
     component: <>Section Gray 100</>,
   },
   {
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl flex justify-center items-center',
     component: <>Section Gray 400</>,
   },
   {
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl flex justify-center items-center',
     component: <>Section Gray 800</>,
   },
   {
@@ -35,11 +37,19 @@ const sections = [
 ];
 
 const App = () => {
+  const [scrollY, setScrollY] = useState(0);
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    console.log(scrollY);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrollY]);
+
   return (
     <>
       <StarsCanvas />
       <Welcome />
-      {sections.map(({ classes, component }, index) => (
+      {sections(scrollY).map(({ classes, component }, index) => (
         <section key={index} className={`w-full h-full ${classes}`}>
           {component}
         </section>
