@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './InfoBox.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
-function InfoBox({ title, text }) {
+const InfoBox = ({ title, text }) => {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -51,13 +49,13 @@ function InfoBox({ title, text }) {
   }, []);
 
   return (
-    <section className='typewriter-box'>
+    <div className='typewriter-box'>
       <h2 className='typewriter-title'>{title}</h2>
       <p className='typewriter' ref={textRef}>
         {text}
       </p>
-    </section>
+    </div>
   );
-}
+};
 
 export default InfoBox;

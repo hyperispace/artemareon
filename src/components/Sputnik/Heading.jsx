@@ -1,11 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Heading.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
-function Heading({ title }) {
+const Heading = ({ title }) => {
   const headingRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +23,6 @@ function Heading({ title }) {
             start: 'top 110%', // Adjust this value
             end: 'bottom top', // Adjust this value
             scrub: true,
-            // markers: true,
           },
         },
       );
@@ -37,6 +34,6 @@ function Heading({ title }) {
       {title}
     </h1>
   );
-}
+};
 
 export default Heading;
