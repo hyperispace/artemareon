@@ -1,12 +1,9 @@
-// PopUpText.js
-import React, { useEffect, useRef } from 'react';
+/* eslint-disable react/prop-types */
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './PopUpText.css';
 
-gsap.registerPlugin(ScrollTrigger);
-
-function PopUpText({ text }) {
+const PopUpText = ({ text }) => {
   const bubbleRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +22,6 @@ function PopUpText({ text }) {
             start: 'top 70%', // Adjust this value to control when the fade starts
             end: 'top 50%', // Adjust this value as needed
             scrub: true,
-            markers: true,
             onEnter: () =>
               gsap.to(bubbleElement, { opacity: 1, duration: 0.5 }),
             onLeave: () =>
@@ -45,6 +41,6 @@ function PopUpText({ text }) {
       <p className='bubble-text'>{text}</p>
     </div>
   );
-}
+};
 
 export default PopUpText;

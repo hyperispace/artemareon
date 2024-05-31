@@ -6,7 +6,7 @@ import { useGSAP } from '@gsap/react';
 import './App.css';
 import Sample from './components/Sample';
 import Sputnik from './components/Sputnik/Sputnik';
-import StarsCanvas from './components/StarsCanvas/StarsCanvas';
+import StarsCanvas from './components/StarsCanvas';
 import Welcome from './components/Welcome';
 import { useRef } from 'react';
 
@@ -26,15 +26,14 @@ const sections = [
     component: <>Section Gray 100</>,
   },
   {
-    event: 'Event 2',
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    event: "Humanity's First Artificial Satellite",
+    classes: 'relative border-[1px] flex flex-col items-start',
     component: <Sputnik />,
   },
   {
     event: 'Event 3',
     classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+      'text-white text-5xl border-[1px] flex justify-center items-center h-[200vh]',
     component: <>Section Gray 400</>,
   },
   {

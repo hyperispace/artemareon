@@ -1,12 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import image from '/assets/sputnik.png'; // Import the image
 import './SputnikImage.css'; // Add any specific styles for this component
 
-gsap.registerPlugin(ScrollTrigger);
-
-function SputnikImage() {
+const SputnikImage = () => {
   const imageRef = useRef(null);
 
   useEffect(() => {
@@ -20,12 +17,11 @@ function SputnikImage() {
           start: 'top 80%', // Adjust this value as needed
           end: 'bottom 20%', // Adjust this value as needed
           scrub: true,
-          //   markers: true,
         },
       });
 
       // Set initial position and opacity of the image
-      gsap.set(imageElement, { x: '-200%', y: '0%', opacity: 0.7 });
+      gsap.set(imageElement, { x: '-50%', y: '0%', opacity: 0.7 });
 
       // Animate the image to move from left to right and slightly downwards
       imgTl.to(imageElement, {
@@ -39,6 +35,6 @@ function SputnikImage() {
   }, []);
 
   return <img className='sputnik' ref={imageRef} src={image} alt='sputnik' />;
-}
+};
 
 export default SputnikImage;
