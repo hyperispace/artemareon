@@ -36,7 +36,7 @@ const Welcome = () => {
   }, []);
 
   return !isEntered ? (
-    <section className='fixed w-full h-full flex flex-col gap-32 justify-start items-center text-white bg-[url("/assets/welcome.webp")] bg-no-repeat bg-cover bg-center pt-28  text-center'>
+    <section className='fixed w-full h-full flex flex-col gap-32 justify-start items-center text-white bg-[url("/assets/welcome.webp")] bg-no-repeat bg-cover bg-center pt-28  text-center z-50'>
       <h1 ref={headingRef} className='bg-[#1A1C48]/70 py-5 px-10 rounded-md'>
         The Beginning of a Giant Leap for Mankind
       </h1>
