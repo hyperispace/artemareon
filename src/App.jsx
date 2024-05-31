@@ -56,13 +56,8 @@ const App = () => {
     () => {
       if (!trackRef.current) return;
 
-      const scrollContainer = document.querySelector('[data-scroller]');
-      const sections = gsap.utils.toArray('section');
       const track = document.querySelector('[data-draggable]');
       const navLinks = gsap.utils.toArray('[data-link]');
-      const prefersReducedMotion = window.matchMedia(
-        '(prefers-reduced-motion: reduce)',
-      );
 
       const lastItemWidth = () => navLinks[navLinks.length - 1].offsetWidth;
 
