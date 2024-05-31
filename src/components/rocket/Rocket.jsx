@@ -40,14 +40,14 @@ const Model = () => {
     if (outerRef.current) {
       gsap.to(outerRef.current.rotation, {
         x: -1,
-        y: 1,
+        y: -1,
         z: 0,
         duration: 2,
         ease: 'power1.inOut',
       });
       gsap.to(outerRef.current.position, {
-        x: -3,
-        y: 1,
+        x: 3,
+        y: -1,
         z: 1,
         ease: 'power1.inOut',
         duration: 2,
