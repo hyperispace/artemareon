@@ -2,13 +2,14 @@ import { useState, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-const Welcome = () => {
+const Welcome = ({ clicking }) => {
   const [isEntered, setIsEntered] = useState(false);
   const headingRef = useRef(null);
   const buttonRef = useRef(null);
   const paragraphRef = useRef(null);
 
   const handleStart = () => {
+    clicking(true);
     setIsEntered(true);
     document.body.classList.remove('overflow-hidden');
   };
