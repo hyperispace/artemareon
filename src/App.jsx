@@ -6,10 +6,8 @@ import { IoMdRocket } from 'react-icons/io';
 
 import './App.css';
 import Intro from './components/Intro/Intro';
-import Sample from './components/Sample';
 import Sputnik from './components/Sputnik/Sputnik';
 import StarsCanvas from './components/StarsCanvas';
-import Welcome from './components/Welcome';
 import { useRef } from 'react';
 /**
  * Push your sections into this array
@@ -28,82 +26,104 @@ const sections = [
     component: <>Pre Section</>,
   },
   {
-    title: "Humanity's First Artificial Satellite",
+    // SECTION 1
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.xxzlvykqote4
+    title: 'The Dawn of the Space Age',
     isEvent: true,
     classes: 'relative border-[1px] flex flex-col items-start',
-    component: <Sputnik />,
+    component: <Sputnik />, // TODO: rename the component name
   },
   {
-    title: 'Event 2',
+    // SECTION 2
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.woscxkgg8cfo
+    title: 'The First Living Being in Space',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center h-[200vh]',
-    component: <>Event 2</>,
+    component: <>The First Living Being in Space</>,
   },
   {
-    title: 'Event 3',
+    // SECTION 3
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.6krekl9614td
+    title: 'Pioneers of Space',
     isEvent: true,
     classes:
       'bg-gray-900 flex flex-col justify-center items-center bg-black text-white',
-    component: <Sample />,
+    component: <>Pioneers of Space</>,
   },
   {
-    title: 'Event 4',
+    // SECTION 4
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.prif68mv8rja
+    title: 'A Historic First',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 4</>,
+    component: <>A Historic First</>,
   },
   {
-    title: 'Event 5',
+    // SECTION 5
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.imldyyu6bthd
+    title: 'Circling the Moon',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 5</>,
+    component: <>Circling the Moon</>,
   },
   {
-    title: 'Event 6',
+    // SECTION 6
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.1naq12f5fca8
+    title: 'Moon Landing',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 6</>,
+    component: <>Moon Landing</>,
   },
   {
-    title: 'The Lunar',
+    // SECTION 7
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.nqenuqysn7nm
+    title: 'One Small Step',
     isEvent: true,
     timeline_picture: './assets/timeline-lunar.png',
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>The Lunar</>,
+    component: <>One Small Step</>,
   },
   {
-    title: 'Event 8',
+    // SECTION 8
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.m6chkh9cl3vt
+    title: 'Space Oddity',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 8</>,
+    component: <>Space Oddity</>,
   },
   {
-    title: 'Event 9',
+    // SECTION 9
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.akcexmg63ges
+    title: 'Lunar Gateway',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 9</>,
+    component: <>Lunar Gateway</>,
   },
   {
-    title: 'Event 10',
+    // SECTION 10
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.emyklo4l5an1
+    title: 'The Red Frontier',
     isEvent: true,
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Event 10</>,
+    component: <>The Red Frontier</>,
   },
   {
-    title: 'The Mars',
+    // SECTION 11
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.ns9b64vt82qc
+    title: 'Landing Humans on Mars',
     isEvent: true,
     timeline_picture: './assets/timeline-mars.png',
     classes:
       'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>The Mars</>,
+    component: <>Landing Humans on Mars</>,
   },
 ].map((section, index) => ({ ...section, id: index }));
 
@@ -184,7 +204,7 @@ const App = () => {
   return (
     <>
       <StarsCanvas />
-      {/* <Welcome /> */}
+      {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
       <Intro />
       <nav>
         {/* <div className='marker'></div> */}

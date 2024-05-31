@@ -15,7 +15,6 @@ const Intro = () => {
   const mainTimeline = useRef(gsap.timeline({ paused: true }));
 
   const handleStart = () => {
-    document.body.classList.remove('overflow-hidden');
     mainTimeline.current.play();
   };
 
@@ -88,6 +87,7 @@ const Intro = () => {
           opacity: 0,
           onComplete: () => {
             setIsEntered(true);
+            document.body.classList.remove('overflow-hidden');
           },
         },
         '-=1',
