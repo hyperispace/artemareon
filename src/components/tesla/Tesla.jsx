@@ -1,9 +1,8 @@
 import React, { useRef, useEffect, useState, Suspense } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 import { Environment, OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
 import { gsap } from "gsap";
 
 // Get current direcory path
@@ -11,7 +10,7 @@ const __dirname = new URL(".", import.meta.url).pathname;
 
 const Model = (props) => {
   const model = useRef();
-  const { nodes, materials } = useGLTF(`${__dirname}/model.gltf`);
+  const { nodes, materials } = useGLTF('./src/components/tesla/model.gltf');
 
   
   // Headlight animation
@@ -119,4 +118,4 @@ export default function RenderModel() {
   );
 }
 
-useGLTF.preload(`${__dirname}/model.gltf`);
+useGLTF.preload('./src/components/tesla/model.gltf');
