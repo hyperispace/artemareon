@@ -3,6 +3,8 @@ import Sample from './components/Sample';
 import StarsCanvas from './components/StarsCanvas/StarsCanvas';
 import Welcome from './components/Welcome';
 import { useEffect, useState } from 'react';
+import Rocket from './components/rocket';
+import Tesla from './components/tesla';
 
 /**
  * Push your sections into this array
@@ -15,7 +17,11 @@ import { useEffect, useState } from 'react';
 const sections = (scrollY) => [
   {
     classes: ' text-white text-5xl flex justify-center items-center',
-    component: <Tesla scrollY={scrollY} />,
+    component: <Rocket scrollY={scrollY} />,
+  },
+  {
+    classes: ' text-white text-5xl flex justify-center items-center',
+    component: <Tesla />,
   },
   {
     classes: ' text-white text-5xl flex justify-center items-center',
@@ -41,7 +47,6 @@ const App = () => {
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
-    console.log(scrollY);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [scrollY]);
 
