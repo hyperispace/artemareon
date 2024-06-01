@@ -25,7 +25,18 @@ const Intro = () => {
       .fromTo(
         headingRef.current,
         { opacity: 0, x: -50 },
-        { opacity: 1, x: 0, duration: 1, ease: 'power3.inOut' },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power3.inOut',
+          onStart: () => {
+            // remove for sure
+            document.body.classList.remove('overflow-hidden');
+            // then add it back
+            document.body.classList.add('overflow-hidden');
+          },
+        },
         '+=1',
       )
 
