@@ -10,6 +10,7 @@ import Sputnik from './components/Sputnik/Sputnik';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
 import { useRef } from 'react';
+import Section02 from './components/Section02/Section02';
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -39,9 +40,8 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.woscxkgg8cfo
     title: 'The First Living Being in Space',
     isEvent: true,
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center h-[200vh]',
-    component: <>The First Living Being in Space</>,
+    classes: 'relative border-[1px] flex flex-col items-start',
+    component: <Section02 />,
   },
   {
     // SECTION 3
