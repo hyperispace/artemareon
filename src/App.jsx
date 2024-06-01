@@ -7,6 +7,7 @@ import { IoMdRocket } from 'react-icons/io';
 import './App.css';
 import Intro from './components/Intro/Intro';
 import Sputnik from './components/Sputnik/Sputnik';
+import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
 import { useRef } from 'react';
 /**
@@ -111,9 +112,8 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.emyklo4l5an1
     title: 'The Red Frontier',
     isEvent: true,
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>The Red Frontier</>,
+    classes: 'relative border-[1px] flex flex-col items-start',
+    component: <Section10 />,
   },
   {
     // SECTION 11
