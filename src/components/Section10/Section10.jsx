@@ -27,7 +27,7 @@ const Section10 = () => {
             start: 'top bottom', // Adjust as needed
             end: 'bottom center', // Adjust as needed
             scrub: true,
-            markers: true,
+            markers: false,
           },
         },
       );
