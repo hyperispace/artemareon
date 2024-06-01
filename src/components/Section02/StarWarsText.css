@@ -1,0 +1,35 @@
+.section02-crawl {
+  font-size: 3vw;
+  bottom: 0;
+  height: 80rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%) perspective(300px) rotateX(28deg);
+  transform-origin: 50% 100%;
+  width: 90%;
+}
+
+.section02-content {
+  position: absolute;
+  top: 100%;
+}
+
+.section02-subtitle {
+  font-family: monospace;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 7rem;
+  transform: scale(1, 1.5);
+  text-align: center;
+  color: rgb(229, 177, 58);
+}
+
+.section02-content p {
+  font-weight: 800;
+  font-family: monospace;
+  line-height: 1.33;
+  margin-bottom: 4rem;
+  text-align: justify;
+  color: rgb(229, 177, 58);
+}
