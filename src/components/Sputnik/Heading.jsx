@@ -23,6 +23,7 @@ const Heading = ({ title }) => {
             start: 'top 110%', // Adjust this value
             end: 'bottom top', // Adjust this value
             scrub: true,
+            markers: true,
           },
         },
       );
