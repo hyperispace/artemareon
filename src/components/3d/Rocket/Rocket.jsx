@@ -8,7 +8,7 @@ const Model = () => {
   const innerRef = useRef();
   const outerRef = useRef();
 
-  const { nodes, materials } = useGLTF('./src/components/rocket/model.gltf');
+  const { nodes, materials } = useGLTF('./src/components/3d/rocket/model.gltf');
 
   const modelProps = {
     position: [0, -1, 0],
@@ -101,4 +101,4 @@ export default function RenderModel(scrollY) {
   );
 }
 
-useGLTF.preload('./src/components/rocket/model.gltf');
+useGLTF.preload('./src/components/3d/rocket/model.gltf');

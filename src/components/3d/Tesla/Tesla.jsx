@@ -5,13 +5,9 @@ import * as THREE from "three";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { gsap } from "gsap";
 
-// Get current direcory path
-const __dirname = new URL(".", import.meta.url).pathname;
-
 const Model = (props) => {
   const model = useRef();
-  const { nodes, materials } = useGLTF('./src/components/tesla/model.gltf');
-
+  const { nodes, materials } = useGLTF('./src/components/3d/tesla/model.gltf');
   
   // Headlight animation
   const headlight = useRef();
@@ -118,4 +114,4 @@ export default function RenderModel() {
   );
 }
 
-useGLTF.preload('./src/components/tesla/model.gltf');
+useGLTF.preload('./src/components/3d/tesla/model.gltf');
