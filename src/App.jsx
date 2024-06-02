@@ -7,6 +7,7 @@ import { IoMdRocket } from 'react-icons/io';
 import './App.css';
 import Intro from './components/Intro/Intro';
 import Sputnik from './components/Sputnik/Sputnik';
+import Section4 from './components/Section4/Section4';
 import Section5 from './components/Section5/Section5';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
@@ -59,8 +60,8 @@ const sections = [
     title: 'A Historic First',
     isEvent: true,
     classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>A Historic First</>,
+      'h-[80rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <Section4 />,
   },
   {
     // SECTION 5
@@ -68,7 +69,7 @@ const sections = [
     title: 'Circling the Moon',
     isEvent: true,
     classes:
-      'h-full relative text-white text-5xl border-[1px] flex justify-center items-center',
+      'h-[50rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
     component: <Section5 />,
   },
   {
