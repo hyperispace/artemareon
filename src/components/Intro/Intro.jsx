@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { familyPhoto, launching } from '../../constant/images';
+import { familyPhoto, launching, rocket } from '../../constant/images';
 import { useGSAP } from '@gsap/react';
 
 const Intro = () => {
@@ -11,6 +11,7 @@ const Intro = () => {
   const buttonRef = useRef(null);
   const paragraphRef = useRef(null);
   const overlayRef = useRef(null);
+  const rocketRef = useRef(null);
   const introTimeline = useRef(gsap.timeline());
   const mainTimeline = useRef(gsap.timeline({ paused: true }));
 
@@ -51,12 +52,26 @@ const Intro = () => {
         { opacity: 0, x: 50 },
         { opacity: 1, x: 0, duration: 1, ease: 'power3.inOut' },
         '-=0.5',
+      )
+      .fromTo(
+        rocketRef.current,
+        { opacity: 0, x: 500, y: -90 },
+        { opacity: 1, x: 350, y: -90, duration: 2, ease: 'power3.inOut' },
+        '-=0.5',
       );
 
     mainTimeline.current
-      .to([headingRef.current, buttonRef.current, paragraphRef.current], {
-        opacity: 0,
-      })
+      .to(
+        [
+          headingRef.current,
+          buttonRef.current,
+          paragraphRef.current,
+          rocketRef.current,
+        ],
+        {
+          opacity: 0,
+        },
+      )
       .to(overlayRef.current, { opacity: 0 })
       .add(() => {
         fullScreenVideo.play();
@@ -107,29 +122,35 @@ const Intro = () => {
 
   return !isEntered ? (
     <section className='absolute top-0 left-0 h-screen w-full overflow-hidden z-[50] bg-black'>
-      <div className='content absolute h-full w-full z-50 flex flex-col items-start justify-center p-14'>
-        <h1
-          ref={headingRef}
-          className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-poppins'
-        >
-          The Beginning of a Giant Leap for Mankind
-        </h1>
-        <p
-          ref={paragraphRef}
-          className='w-[65ch] px-10 rounded-md text-[1.25rem] text-white tracking-wide leading-relaxed font-openSans'
-        >
-          Let&lsquo;s take one small step for man, and one giant leap for
-          mankind, as we venture into the vast expanse of outer space together.
-          Join us as we scroll through space history, from the early days of
-          space flight to the visionary plans for interplanetary travel!
-        </p>
-        <button
-          ref={buttonRef}
-          className='bg-[#FFFFFF] py-3 px-10 rounded-md font-medium text-[#1A1C48] text-[1.5rem] mt-8 self-end hover:text-white hover:bg-transparent border border-white'
-          onClick={handleStart}
-        >
-          Start Journey
-        </button>
+      <div className=' flex justify-center items-center  z-50'>
+        <div className='content absolute h-full w-full flex flex-col items-start justify-center p-14'>
+          <h1
+            ref={headingRef}
+            className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-poppins'
+          >
+            The Beginning of a Giant Leap for Mankind
+          </h1>
+          <p
+            ref={paragraphRef}
+            className='w-[65ch] px-10 rounded-md text-[1.25rem] text-white tracking-wide leading-relaxed font-openSans'
+          >
+            Let&lsquo;s take one small step for man, and one giant leap for
+            mankind, as we venture into the vast expanse of outer space
+            together. Join us as we scroll through space history, from the early
+            days of space flight to the visionary plans for interplanetary
+            travel!
+          </p>
+          <button
+            ref={buttonRef}
+            className='bg-[#FFFFFF] py-3 px-10 rounded-md font-medium text-[#1A1C48] text-[1.5rem] mt-8 self-end hover:text-white hover:bg-transparent border border-white'
+            onClick={handleStart}
+          >
+            Start Journey
+          </button>
+        </div>
+        <div ref={rocketRef}>
+          <img src={rocket} alt='rocket' />
+        </div>
       </div>
       <div
         ref={overlayRef}
