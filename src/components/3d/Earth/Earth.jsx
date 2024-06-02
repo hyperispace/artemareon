@@ -46,20 +46,21 @@ const RenderModel = forwardRef((props, ref) => {
     <>
       <Canvas ref={ref} {...props}>
         {/* Light on model */}
-        <ambientLight intensity={10} />
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[-5, 20, 30]} intensity={10} />
 
         {/* Controls */}
         <OrbitControls
-          // enableZoom={false}
-          // enablePan={false}
-          // enableRotate={false}
+          enableZoom={false}
+          enablePan={false}
+          enableRotate={false}
           autoRotate
-          autoRotateSpeed={0.4}
+          autoRotateSpeed={0.6}
         />
 
         {/* Model */}
         <Suspense fallback={null}>
-          <Model position={[0, 0, 0]} scale={1} />
+          <Model position={[0, 0, 0]} scale={2.1} />
         </Suspense>
       </Canvas>
     </>
