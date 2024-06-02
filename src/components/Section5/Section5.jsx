@@ -8,6 +8,8 @@ import Earth from '../3d/Earth/Earth';
 import Earthrise from './earthrise.png';
 import Apollo8 from './apollo8.webp';
 import Heading from '../common/Heading';
+import InfoBox from '../common/InfoBox';
+import PopUpText from '../common/PopUpText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,24 +20,24 @@ const Section5 = () => {
 
   useEffect(() => {
     if (earthRef.current)
-    gsap.fromTo(
-      earthRef.current,
-      { x: window.innerWidth, y: window.innerHeight / 2 - 50, scale: 1 },
-      {
-        x: -window.innerWidth,
-        duration: 30,
-        repeat: -1,
-        ease: 'linear',
-        onUpdate: () => {
-          const position = gsap.getProperty(earthRef.current, 'x');
-          const midPoint = window.innerWidth / 2;
-          const distanceToMidPoint = Math.abs(midPoint - position);
-          const maxDistance = midPoint;
-          const scale = 0.5 + 0.5 * (distanceToMidPoint / maxDistance); // Adjust the scale
-          gsap.set(earthRef.current, { scale });
+      gsap.fromTo(
+        earthRef.current,
+        { x: window.innerWidth, y: window.innerHeight / 2 - 50, scale: 1 },
+        {
+          x: -window.innerWidth,
+          duration: 30,
+          repeat: -1,
+          ease: 'linear',
+          onUpdate: () => {
+            const position = gsap.getProperty(earthRef.current, 'x');
+            const midPoint = window.innerWidth / 2;
+            const distanceToMidPoint = Math.abs(midPoint - position);
+            const maxDistance = midPoint;
+            const scale = 0.5 + 0.5 * (distanceToMidPoint / maxDistance); // Adjust the scale
+            gsap.set(earthRef.current, { scale });
+          },
         },
-      },
-    );
+      );
   }, []);
 
   useEffect(() => {
@@ -74,8 +76,19 @@ const Section5 = () => {
         ref={apollo8Ref}
         src={Apollo8}
         alt='Apollo 8'
-        style={{ width: '10%', position: 'absolute', marginTop: '20rem', marginLeft: '20rem'}}
+        style={{
+          width: '10%',
+          position: 'absolute',
+          marginTop: '20rem',
+          marginLeft: '20rem',
+        }}
       />
+      <InfoBox
+        className="info-box"
+        title="Humanity's First Artificial Satellite"
+        text="In December 1968, Apollo 8 carried the first humans around the Moon, with crew members Frank Borman, James Lovell, and William Anders. They were the first to see the Moon's far side. William Anders took the iconic [Earthrise] photo, showing Earth above the lunar horizon. This mission showcased NASA's capabilities and paved the way for the lunar landing."
+      />
+      <PopUpText text='We came all this way to explore the Moon, and the most important thing is that we discovered the Earth.' />
     </section>
   );
 };

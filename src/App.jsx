@@ -68,7 +68,7 @@ const sections = [
     title: 'Circling the Moon',
     isEvent: true,
     classes:
-      'h-full text-white text-5xl border-[1px] flex justify-center items-center',
+      'h-full relative text-white text-5xl border-[1px] flex justify-center items-center',
     component: <Section5 />,
   },
   {
