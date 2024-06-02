@@ -30,9 +30,9 @@ const Model = (props) => {
     <group ref={group} {...props} dispose={null}>
       {/* Inner mesh group */}
       <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={1.314}>
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={1}>
           <group name="root">
-            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 0, 0]}>
+            <group name="GLTF_SceneRootNode" rotation={[Math.PI / 2, 10, 1]}>
               <group name="RootNode0_0" scale={0.01}>
                 <group name="skeletal3_6">
                   <group name="GLTF_created_0">
@@ -76,7 +76,7 @@ export default function RenderModel() {
 
       {/* Model */}
       <Suspense fallback={null}>
-        <Model position={[0, 0, 0]} scale={5} rotation={[-1, -3, 12]} />
+        <Model position={[-3.3, 2.5, 0]} scale={1.5} rotation={[-1, -2, 9.4]} />
       </Suspense>
 
       {/* Environment reflection effect on model's body */}
