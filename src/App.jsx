@@ -9,6 +9,7 @@ import Intro from './components/Intro/Intro';
 import Sputnik from './components/Sputnik/Sputnik';
 import Section4 from './components/Section4/Section4';
 import Section5 from './components/Section5/Section5';
+import Section8 from './components/Section8/Section8';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
 import { useRef } from 'react';
@@ -97,8 +98,8 @@ const sections = [
     title: 'Space Oddity',
     isEvent: true,
     classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Space Oddity</>,
+      'h-[50rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <Section8 />,
   },
   {
     // SECTION 9
