@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Section5.css';
 import Moon from '../3d/Moon/Moon';
-import Earth from '../3d/Earth/Earth';
 import Earthrise from './earthrise.png';
 import Apollo8 from './apollo8.webp';
 import Heading from '../common/Heading';
@@ -45,10 +44,10 @@ const Section5 = () => {
     if (apollo8Ref.current)
       gsap.fromTo(
         apollo8Ref.current,
-        { opacity: 6, scale: 0.5 },
+        { opacity: 6, scale: 1 },
         {
           opacity: 1,
-          scale: 1,
+          scale: 0.5,
           duration: 0.5,
           ease: 'power2.inOut',
           scrollTrigger: {
@@ -66,7 +65,6 @@ const Section5 = () => {
     <section className='background' ref={sectionRef}>
       <Heading title='Circling the Moon' />
       <SubHeadings title='Paving the Way for Lunar Landing' />
-      {/* <Earth ref={earthRef} style={{position: 'absolute'}}/> */}
       <img
         ref={earthRef}
         src={Earthrise}
@@ -82,11 +80,11 @@ const Section5 = () => {
           width: '10%',
           position: 'absolute',
           marginTop: '20rem',
-          marginLeft: '20rem',
+          marginLeft: '23rem',
         }}
       />
       <InfoBox
-        title="Humanity's First Artificial Satellite"
+        title="Apollo 8"
         text="In December 1968, Apollo 8 carried the first humans around the Moon, with crew members Frank Borman, James Lovell, and William Anders. They were the first to see the Moon's far side. William Anders took the iconic [Earthrise] photo, showing Earth above the lunar horizon. This mission showcased NASA's capabilities and paved the way for the lunar landing."
       />
       <PopUpText text='We came all this way to explore the Moon, and the most important thing is that we discovered the Earth. — William Anders, Apollo 8 Astronaut' />
