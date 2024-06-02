@@ -60,7 +60,8 @@ export default function RenderModel(props) {
     <>
       <Canvas>
         {/* Light on model */}
-        <ambientLight intensity={2} />
+        <ambientLight intensity={0.3} />
+        <directionalLight position={[15, 1, 10]} intensity={7} />
 
         {/* Controls */}
         <OrbitControls
@@ -68,7 +69,7 @@ export default function RenderModel(props) {
           enablePan={false}
           enableRotate={false}
           autoRotate
-          autoRotateSpeed={0.5}
+          autoRotateSpeed={0.7}
         />
 
         {/* Model */}
