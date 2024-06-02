@@ -8,6 +8,7 @@ import Earth from '../3d/Earth/Earth';
 import Earthrise from './earthrise.png';
 import Apollo8 from './apollo8.webp';
 import Heading from '../common/Heading';
+import SubHeadings from '../common/SubHeadings';
 import InfoBox from '../common/InfoBox';
 import PopUpText from '../common/PopUpText';
 
@@ -64,6 +65,7 @@ const Section5 = () => {
   return (
     <section className='background' ref={sectionRef}>
       <Heading title='Circling the Moon' />
+      <SubHeadings title='Paving the Way for Lunar Landing' />
       {/* <Earth ref={earthRef} style={{position: 'absolute'}}/> */}
       <img
         ref={earthRef}
