@@ -31,7 +31,7 @@ const Heading = ({ title }) => {
   }, []);
 
   return (
-    <h1 className='sputnik-heading' ref={headingRef}>
+    <h1 className='heading' ref={headingRef}>
       {title}
     </h1>
   );
