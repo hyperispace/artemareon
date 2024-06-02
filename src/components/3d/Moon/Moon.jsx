@@ -54,7 +54,7 @@ const Model = (props) => {
   );
 };
 
-export default function RenderModel() {
+export default function RenderModel(props) {
 
   return (
     <>
@@ -68,7 +68,7 @@ export default function RenderModel() {
           enablePan={false}
           enableRotate={false}
           autoRotate
-          autoRotateSpeed={1.3}
+          autoRotateSpeed={0.5}
         />
 
         {/* Model */}
