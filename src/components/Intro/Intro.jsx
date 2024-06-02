@@ -48,8 +48,8 @@ const Intro = () => {
       )
       .fromTo(
         buttonRef.current,
-        { opacity: 0, y: -50 },
-        { opacity: 1, y: 0, duration: 1, ease: 'power3.inOut' },
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 1, ease: 'power3.inOut' },
         '-=0.5',
       );
 
@@ -90,7 +90,7 @@ const Intro = () => {
           //   console.log('paused');
           // },
         },
-        '-=1.5',
+        '-=1.9',
       )
       .to(
         containerRef.current,
@@ -110,13 +110,13 @@ const Intro = () => {
       <div className='content absolute h-full w-full z-50 flex flex-col items-start justify-center p-14'>
         <h1
           ref={headingRef}
-          className='py-5 px-10 rounded-md mb-4 text-7xl w-[20ch] text-white font-bold leading-relaxed'
+          className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-poppins'
         >
           The Beginning of a Giant Leap for Mankind
         </h1>
         <p
           ref={paragraphRef}
-          className='w-[42rem] py-5 px-10 rounded-md text-[1.25rem] text-white tracking-wide leading-relaxed'
+          className='w-[65ch] px-10 rounded-md text-[1.25rem] text-white tracking-wide leading-relaxed font-openSans'
         >
           Let&lsquo;s take one small step for man, and one giant leap for
           mankind, as we venture into the vast expanse of outer space together.
@@ -125,7 +125,7 @@ const Intro = () => {
         </p>
         <button
           ref={buttonRef}
-          className='bg-[#FFFFFF] py-3 px-10 rounded-md text-[#1A1C48] text-[1.875rem] mt-4 self-center hover:text-white hover:bg-transparent border border-white'
+          className='bg-[#FFFFFF] py-3 px-10 rounded-md font-medium text-[#1A1C48] text-[1.5rem] mt-8 self-end hover:text-white hover:bg-transparent border border-white'
           onClick={handleStart}
         >
           Start Journey
@@ -135,7 +135,7 @@ const Intro = () => {
         ref={overlayRef}
         className=' bg-black/70 absolute h-full w-full z-30'
       ></div>
-      <div className='absolute top-0 left-0 -z-10'>
+      <div className='absolute h-screen w-full -z-10'>
         <video
           className='h-full w-full object-cover'
           ref={fullScreenVideoRef}
