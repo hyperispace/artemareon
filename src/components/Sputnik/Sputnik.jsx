@@ -1,4 +1,4 @@
-import Heading from './Heading';
+import Heading from '../common/Heading';
 import InfoBox from './InfoBox';
 import SputnikImage from './SputnikImage';
 import './Sputnik.css';

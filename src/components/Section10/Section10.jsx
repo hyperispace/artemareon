@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Heading from '../Sputnik/Heading';
+import Heading from '../common/Heading';
 import './Section10.css';
 import MarsInfoText from './MarsInfoText';
 
