@@ -84,7 +84,6 @@ const Section5 = () => {
         }}
       />
       <InfoBox
-        className="info-box"
         title="Humanity's First Artificial Satellite"
         text="In December 1968, Apollo 8 carried the first humans around the Moon, with crew members Frank Borman, James Lovell, and William Anders. They were the first to see the Moon's far side. William Anders took the iconic [Earthrise] photo, showing Earth above the lunar horizon. This mission showcased NASA's capabilities and paved the way for the lunar landing."
       />
