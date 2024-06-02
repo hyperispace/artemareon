@@ -40,27 +40,6 @@ const Section5 = () => {
       );
   }, []);
 
-  useEffect(() => {
-    if (apollo8Ref.current)
-      gsap.fromTo(
-        apollo8Ref.current,
-        { opacity: 6, scale: 1 },
-        {
-          opacity: 1,
-          scale: 0.5,
-          duration: 0.5,
-          ease: 'power2.inOut',
-          scrollTrigger: {
-            trigger: apollo8Ref.current,
-            start: 'top 110%', // Adjust this value
-            end: 'bottom top', // Adjust this value
-            scrub: true,
-            markers: false,
-          },
-        },
-      );
-  }, []);
-
   return (
     <section className='background' ref={sectionRef}>
       <Heading title='Circling the Moon' />
