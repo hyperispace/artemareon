@@ -22,7 +22,7 @@ const Section5 = () => {
     if (earthRef.current)
       gsap.fromTo(
         earthRef.current,
-        { x: window.innerWidth, y: window.innerHeight / 2 - 50, scale: 1 },
+        { x: window.innerWidth, y: window.innerHeight / 2 - 110, scale: 1 },
         {
           x: -window.innerWidth,
           duration: 30,
