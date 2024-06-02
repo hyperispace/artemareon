@@ -7,6 +7,7 @@ import { IoMdRocket } from 'react-icons/io';
 import './App.css';
 import Intro from './components/Intro/Intro';
 import Sputnik from './components/Sputnik/Sputnik';
+import Section5 from './components/Section5/Section5';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
 import { useRef } from 'react';
@@ -67,8 +68,8 @@ const sections = [
     title: 'Circling the Moon',
     isEvent: true,
     classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Circling the Moon</>,
+      'h-full text-white text-5xl border-[1px] flex justify-center items-center',
+    component: <Section5 />,
   },
   {
     // SECTION 6
@@ -205,7 +206,7 @@ const App = () => {
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      <Intro />
+      {/* <Intro /> */}
       <nav>
         {/* <div className='marker'></div> */}
         <IoMdRocket className='marker' />
