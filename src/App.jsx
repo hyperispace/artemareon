@@ -1,8 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Draggable from 'gsap/Draggable';
-import { useGSAP } from '@gsap/react';
-import { IoMdRocket } from 'react-icons/io';
 
 import './App.css';
 import Intro from './components/Intro/Intro';
@@ -12,7 +10,6 @@ import Section5 from './components/Section5/Section5';
 import Section8 from './components/Section8/Section8';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
-import { useRef } from 'react';
 import Section02 from './components/Section02/Section02';
 /**
  * Push your sections into this array
@@ -135,109 +132,11 @@ const generateSectionId = (index) => `section_${index}`;
 gsap.registerPlugin(ScrollTrigger, Draggable);
 
 const App = () => {
-  const trackRef = useRef(null);
-
-  useGSAP(
-    () => {
-      if (!trackRef.current) return;
-
-      const track = document.querySelector('[data-draggable]');
-      const navLinks = gsap.utils.toArray('[data-link]');
-
-      const lastItemWidth = () => navLinks[navLinks.length - 1].offsetWidth;
-
-      const getUseableHeight = () =>
-        document.documentElement.offsetHeight - window.innerHeight;
-
-      const getDraggableWidth = () => {
-        return track.offsetWidth * 0.5 - lastItemWidth();
-      };
-
-      const updatePosition = () => {
-        const left = track.getBoundingClientRect().left * -1;
-        const width = getDraggableWidth();
-        const useableHeight = getUseableHeight();
-        const y = gsap.utils.mapRange(0, width, 0, useableHeight, left);
-
-        st.scroll(y);
-      };
-
-      /* Create the timeline to move the track */
-      const tl = gsap.timeline().to(track, {
-        x: () => getDraggableWidth() * -1,
-        ease: 'none', // remove easing - very important!
-      });
-
-      /* Create the ScrollTrigger instance */
-      const st = ScrollTrigger.create({
-        animation: tl,
-        scrub: 0, // sync timeline to scroll position
-      });
-
-      /* Create the Draggable instance */
-      Draggable.create(track, {
-        type: 'x',
-        inertia: true,
-        bounds: {
-          minX: 0,
-          maxX: getDraggableWidth() * -1,
-        },
-        edgeResistance: 1,
-        onDragStart: () => st.disable(),
-        onDragEnd: () => st.enable(),
-        onDrag: updatePosition,
-        onThrowUpdate: updatePosition,
-      });
-
-      /* Allow navigation via keyboard */
-      track.addEventListener('keyup', (e) => {
-        console.log(e);
-        const id = e.target.getAttribute('href');
-        if (!id || e.key !== 'Tab') return;
-
-        const section = document.querySelector(id);
-        const y = section.getBoundingClientRect().top + window.scrollY;
-
-        st.scroll(y);
-      });
-    },
-    { dependencies: [trackRef] },
-  );
-
   return (
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      {/* <Intro /> */}
-      <nav>
-        {/* <div className='marker'></div> */}
-        <IoMdRocket className='marker' />
-
-        <div ref={trackRef} className='nav__track' data-draggable>
-          <ul className='nav__list'>
-            {sections
-              .filter(({ isEvent }) => isEvent)
-              .map(({ title, id, timeline_picture }, index) => (
-                <li key={index} className='relative'>
-                  <a
-                    href={`#${generateSectionId(id)}`}
-                    className='nav__link'
-                    data-link
-                  >
-                    <span>{title}</span>
-                  </a>
-                  {timeline_picture && (
-                    <img
-                      src={timeline_picture}
-                      className='absolute top-[-28%] left-[32%] w-12 h-12 z-30'
-                      alt={`Icon of ${title}`}
-                    />
-                  )}
-                </li>
-              ))}
-          </ul>
-        </div>
-      </nav>
+      <Intro />
       <main className='w-full h-full'>
         {sections.map(({ classes, component, id }, index) => (
           <section

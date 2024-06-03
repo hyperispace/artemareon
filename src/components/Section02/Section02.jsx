@@ -1,4 +1,4 @@
-import Heading from '../Sputnik/Heading';
+import Heading from '../common/Heading';
 import LaikaImg from './LaikaImg';
 import './Section02.css';
 import StarWarsText from './StarWarsText';

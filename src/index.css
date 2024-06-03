@@ -67,10 +67,6 @@
     pointer-events: none;
   }
 
-  main {
-    margin-top: 6rem;
-  }
-
   section {
     min-height: 100vh;
     /* padding: 8rem 1rem max(5vh, 2rem) 1rem; */
