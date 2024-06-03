@@ -7,7 +7,6 @@
     scrollbar-width: none;
   }
 
-
   html {
     overscroll-behavior: contain;
 
@@ -44,7 +43,6 @@
     font-size: 1.25rem;
   }
 
-
   nav {
     position: fixed;
     top: 0;
@@ -57,7 +55,7 @@
   }
 
   nav::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 1.7rem;
     left: 0;
@@ -68,7 +66,7 @@
   }
 
   section {
-    min-height: 100vh;
+    height: 100vh;
     /* padding: 8rem 1rem max(5vh, 2rem) 1rem; */
     display: flex;
     justify-content: center;
@@ -88,7 +86,7 @@
   }
 
   .marker::before {
-    content: "";
+    content: '';
     position: absolute;
     top: calc(50% - 0.2rem);
     right: 100%;
@@ -131,7 +129,7 @@
   }
 
   .nav__link::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 50%;
