@@ -19,7 +19,7 @@ const Section10 = () => {
         sectionElement,
         { backgroundColor: 'rgba(0, 0, 0, 0)' }, // Initial background color
         {
-          backgroundColor: 'rgba(255, 0, 0, 0.7)', // Target background color
+          backgroundColor: 'rgba(193, 68, 14, 0.7)', // Target background color
           duration: 1,
           ease: 'power1.inOut',
           scrollTrigger: {
