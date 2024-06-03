@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Heading from '../common/Heading';
 import './Section10.css';
 import MarsInfoText from './MarsInfoText';
+import SubHeadings from '../common/SubHeadings';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,6 +38,8 @@ const Section10 = () => {
   return (
     <section className='background' ref={sectionRef}>
       <Heading title='The Red Frontier' />
+      <SubHeadings title='Landing Humans on Mars' />
+
       <MarsInfoText />
     </section>
   );
