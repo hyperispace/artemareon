@@ -5,6 +5,7 @@ import Draggable from 'gsap/Draggable';
 import './App.css';
 import Intro from './components/Intro/Intro';
 import Sputnik from './components/Sputnik/Sputnik';
+import Section0 from './components/Section0/Section0';
 import Section4 from './components/Section4/Section4';
 import Section5 from './components/Section5/Section5';
 import Section8 from './components/Section8/Section8';
@@ -23,16 +24,15 @@ const sections = [
   {
     title: 'Event 1',
     isEvent: false,
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
-    component: <>Pre Section</>,
+    classes: 'text-white text-5xl flex justify-center items-center h-[80%]',
+    component: <Section0 />,
   },
   {
     // SECTION 1
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.xxzlvykqote4
     title: 'The Dawn of the Space Age',
     isEvent: true,
-    classes: 'relative border-[1px] flex flex-col items-start',
+    classes: 'relative flex flex-col items-start',
     component: <Sputnik />, // TODO: rename the component name
   },
   {
@@ -40,7 +40,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.woscxkgg8cfo
     title: 'The First Living Being in Space',
     isEvent: true,
-    classes: 'relative border-[1px] flex flex-col items-start',
+    classes: 'relative  flex flex-col items-start',
     component: <Section02 />,
   },
   {
@@ -58,7 +58,7 @@ const sections = [
     title: 'A Historic First',
     isEvent: true,
     classes:
-      'h-[80rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
+      'h-[80rem] relative text-white text-5xl  flex justify-center items-center',
     component: <Section4 />,
   },
   {
@@ -67,7 +67,7 @@ const sections = [
     title: 'Circling the Moon',
     isEvent: true,
     classes:
-      'h-[50rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
+      'h-[50rem] relative text-white text-5xl flex justify-center items-center',
     component: <Section5 />,
   },
   {
@@ -75,8 +75,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.1naq12f5fca8
     title: 'Moon Landing',
     isEvent: true,
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl  flex justify-center items-center',
     component: <>Moon Landing</>,
   },
   {
@@ -85,8 +84,7 @@ const sections = [
     title: 'One Small Step',
     isEvent: true,
     timeline_picture: './assets/timeline-lunar.png',
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl flex justify-center items-center',
     component: <>One Small Step</>,
   },
   {
@@ -95,7 +93,7 @@ const sections = [
     title: 'Space Oddity',
     isEvent: true,
     classes:
-      'h-[50rem] relative text-white text-5xl border-[1px] flex justify-center items-center',
+      'h-[50rem] relative text-white text-5xl flex justify-center items-center',
     component: <Section8 />,
   },
   {
@@ -103,8 +101,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.akcexmg63ges
     title: 'Lunar Gateway',
     isEvent: true,
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl flex justify-center items-center',
     component: <>Lunar Gateway</>,
   },
   {
@@ -112,7 +109,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.emyklo4l5an1
     title: 'The Red Frontier',
     isEvent: true,
-    classes: 'relative border-[1px] flex flex-col items-start',
+    classes: 'relative  flex flex-col items-start',
     component: <Section10 />,
   },
   {
@@ -121,8 +118,7 @@ const sections = [
     title: 'Landing Humans on Mars',
     isEvent: true,
     timeline_picture: './assets/timeline-mars.png',
-    classes:
-      'text-white text-5xl border-[1px] flex justify-center items-center',
+    classes: 'text-white text-5xl  flex justify-center items-center',
     component: <>Landing Humans on Mars</>,
   },
 ].map((section, index) => ({ ...section, id: index }));
