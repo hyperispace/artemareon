@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
 /* eslint-disable react/prop-types */
-const Gateway = ({ src, width, height }) => {
+const CommonImage = ({ src, width, height }) => {
   const imageRef = useRef(null);
   useGSAP(() => {
     if (!imageRef.current) return;
@@ -32,4 +32,4 @@ const Gateway = ({ src, width, height }) => {
   return <img ref={imageRef} src={src} width={width} height={height} />;
 };
 
-export default Gateway;
+export default CommonImage;
