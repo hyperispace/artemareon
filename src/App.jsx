@@ -15,6 +15,7 @@ import Section02 from './components/Section02/Section02';
 import Section3_1 from './components/Section3_1';
 import Section3_2 from './components/Section3_2';
 import Section9 from './components/Section9';
+import Section6 from './components/Section6';
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -78,7 +79,7 @@ const sections = [
     title: 'Circling the Moon',
     isEvent: true,
     classes:
-      'h-[50rem] relative text-white text-5xl flex justify-center items-center',
+      'h-[100vh] relative text-white text-5xl flex justify-center items-center',
     component: <Section5 />,
   },
   {
@@ -86,8 +87,9 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.1naq12f5fca8
     title: 'Moon Landing',
     isEvent: true,
-    classes: 'text-white text-5xl  flex justify-center items-center',
-    component: <>Moon Landing</>,
+    classes:
+      'flex justify-center items-center relative overflow-hidden h-screen',
+    component: <Section6 />,
   },
   {
     // SECTION 7

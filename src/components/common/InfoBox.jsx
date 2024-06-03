@@ -50,8 +50,8 @@ const InfoBox = ({ title, text }) => {
 
   return (
     <div className='typewriter-box'>
-      <h2 className='typewriter-title'>{title}</h2>
-      <p className='typewriter' ref={textRef}>
+      <h2 className='typewriter-title font-speedy'>{title}</h2>
+      <p className='typewriter font-openSans' ref={textRef}>
         {text}
       </p>
     </div>

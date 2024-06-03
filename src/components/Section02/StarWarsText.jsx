@@ -28,7 +28,7 @@ function StarWarsText() {
   }, []);
 
   return (
-    <section className='section02-crawl' ref={textRef}>
+    <section className='section02-crawl overflow-hidden h-screen' ref={textRef}>
       <div className='section02-content'>
         <h2 className='section02-subtitle'>
           Laika, from Stray Dog to Space Dog

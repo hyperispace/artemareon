@@ -6,6 +6,8 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
         openSans: ['Open Sans', 'sans-serif'],
+        starJedi: ['StarJedi', 'sans-serif'],
+        speedy: ['SpeedyRegular', 'sans-serif'],
       },
       fontSize: {
         '5xl': [
