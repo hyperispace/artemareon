@@ -1,8 +1,8 @@
-import Heading from './Heading';
-import InfoBox from './InfoBox';
+import Heading from '../common/Heading';
+import InfoBox from '../common/InfoBox';
 import SputnikImage from './SputnikImage';
 import './Sputnik.css';
-import PopUpText from './PopUpText';
+import PopUpText from '../common/PopUpText';
 
 const Sputnik = () => {
   return (
