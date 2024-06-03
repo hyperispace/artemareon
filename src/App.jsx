@@ -14,6 +14,7 @@ import StarsCanvas from './components/StarsCanvas';
 import Section02 from './components/Section02/Section02';
 import Section3_1 from './components/Section3_1';
 import Section3_2 from './components/Section3_2';
+import Section9 from './components/Section9';
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -112,7 +113,7 @@ const sections = [
     title: 'Lunar Gateway',
     isEvent: true,
     classes: 'text-white text-5xl flex justify-center items-center',
-    component: <>Lunar Gateway</>,
+    component: <Section9 />,
   },
   {
     // SECTION 10
