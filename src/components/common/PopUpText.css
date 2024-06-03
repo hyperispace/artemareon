@@ -1,4 +1,4 @@
-.bubble {
+/* .bubble {
   position: relative;
   z-index: 100;
   bottom: 100px;
@@ -41,10 +41,17 @@
   z-index: 0;
   bottom: -38px;
   left: 140px;
-}
+} */
 
+.bubble {
+  position: relative;
+  z-index: 100;
+  bottom: 100px;
+  left: 40px;
+  max-width: 500px;
+}
 .bubble-text {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
-  color: black;
+  color: rgb(255, 255, 255);
 }

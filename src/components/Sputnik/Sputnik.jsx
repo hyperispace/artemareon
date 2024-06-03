@@ -3,11 +3,13 @@ import InfoBox from '../common/InfoBox';
 import SputnikImage from './SputnikImage';
 import './Sputnik.css';
 import PopUpText from '../common/PopUpText';
+import SubHeadings from '../common/SubHeadings';
 
 const Sputnik = () => {
   return (
     <>
       <Heading title='The Dawn of the Space Age' />
+      <SubHeadings title='Sputnik 1' />
       <div className='block'></div>
       <InfoBox
         title="Humanity's First Artificial Satellite"
