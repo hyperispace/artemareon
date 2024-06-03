@@ -3,15 +3,13 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
 /* eslint-disable react/prop-types */
-const CommonImage = ({ src, width, height }) => {
+const CommonImage = ({ src, width, height, classes }) => {
   const imageRef = useRef(null);
   useGSAP(() => {
     if (!imageRef.current) return;
+    gsap.set(imageRef.current, { x: '-50%', y: '0%', opacity: 0 });
     gsap
       .timeline({
-        x: '10%',
-        y: '0%',
-        opacity: 0.7,
         scrollTrigger: {
           trigger: imageRef.current,
           start: 'top 80%',
@@ -19,6 +17,7 @@ const CommonImage = ({ src, width, height }) => {
           scrub: true,
         },
       })
+      // .set({ x: '-50%', y: '0%', opacity: 0 })
       .to(imageRef.current, {
         x: '100%',
         y: '10%',
@@ -29,7 +28,15 @@ const CommonImage = ({ src, width, height }) => {
         ease: 'power1.inOut',
       });
   }, []);
-  return <img ref={imageRef} src={src} width={width} height={height} />;
+  return (
+    <img
+      ref={imageRef}
+      src={src}
+      width={width}
+      height={height}
+      className={classes}
+    />
+  );
 };
 
 export default CommonImage;
