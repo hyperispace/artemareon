@@ -19,7 +19,7 @@
 
   html,
   body {
-    @apply w-full h-full scrollbar-hide;
+    @apply w-full h-full scrollbar-hide overflow-x-hidden;
   }
 
   body {

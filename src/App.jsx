@@ -12,6 +12,8 @@ import Section8 from './components/Section8/Section8';
 import Section10 from './components/Section10/Section10';
 import StarsCanvas from './components/StarsCanvas';
 import Section02 from './components/Section02/Section02';
+import Section3_1 from './components/Section3_1';
+import Section3_2 from './components/Section3_2';
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -44,13 +46,21 @@ const sections = [
     component: <Section02 />,
   },
   {
-    // SECTION 3
+    // SECTION 3.1
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.6krekl9614td
     title: 'Pioneers of Space',
     isEvent: true,
-    classes:
-      'bg-gray-900 flex flex-col justify-center items-center bg-black text-white',
-    component: <>Pioneers of Space</>,
+    classes: 'flex w-full h-full justify-start items-start',
+    component: <Section3_1 />,
+  },
+
+  {
+    // SECTION 3.2
+    // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.6krekl9614td
+    title: 'Pioneers of Space',
+    isEvent: true,
+    classes: 'flex w-full h-full justify-start items-start',
+    component: <Section3_2 />,
   },
   {
     // SECTION 4
@@ -132,7 +142,7 @@ const App = () => {
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      <Intro />
+      {/* <Intro /> */}
       <main className='w-full h-full'>
         {sections.map(({ classes, component, id }, index) => (
           <section
