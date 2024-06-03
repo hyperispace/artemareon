@@ -13,7 +13,7 @@ const LaikaImg = () => {
     const laika = laikaRef.current;
 
     // Set initial position of the image outside the screen on the right
-    gsap.set(laika, { x: '100vw', rotate: 0 });
+    gsap.set(laika, { opacity: 1 });
 
     // Create a timeline for the image animation
     gsap
@@ -27,10 +27,8 @@ const LaikaImg = () => {
         },
       })
       .to(laika, {
-        x: '-100vw',
-        rotate: -360,
         duration: 2.5,
-        opacity: 1,
+        opacity: 0,
         ease: 'none',
       });
   }, []);
