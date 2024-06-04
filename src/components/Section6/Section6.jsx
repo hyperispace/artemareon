@@ -66,10 +66,14 @@ const Section6 = () => {
         />
       </div>
       <div>
-        <InfoBox
-          title='Moon Landing'
-          text="On July 20, 1969, humanity achieved one of its greatest accomplishments when Apollo 11 astronauts Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon. This historic event marked a monumental leap forward in space exploration and captivated the world's imagination.The Apollo 11 Moon landing remains one of humanity's most significant achievements, inspiring generations and pushing the boundaries of what is possible. The lessons learned from this mission continue to shape our understanding of space exploration and our place in the universe."
-        />
+        <div className=' w-full h-full flex justify-center items-start absolute right-[15vw] top-[30vh] z-10'>
+          <div className=' w-[30vw]'>
+            <InfoBox
+              title='Moon Landing'
+              text="On July 20, 1969, humanity achieved one of its greatest accomplishments when Apollo 11 astronauts Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon. This historic event marked a monumental leap forward in space exploration and captivated the world's imagination.The Apollo 11 Moon landing remains one of humanity's most significant achievements, inspiring generations and pushing the boundaries of what is possible. The lessons learned from this mission continue to shape our understanding of space exploration and our place in the universe."
+            />
+          </div>
+        </div>
       </div>
       <div
         style={{
