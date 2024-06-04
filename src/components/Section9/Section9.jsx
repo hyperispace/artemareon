@@ -2,7 +2,7 @@ import Heading from '../common/Heading';
 import SubHeadings from '../common/SubHeadings';
 import PopUpText from '../common/PopUpText';
 import InfoBox from '../common/InfoBox';
-import CommonImage from '../common/CommonImage';
+import CommonImageLunarGateway from '../common/CommonImageLunarGateway';
 
 const Section9 = () => {
   return (
@@ -20,7 +20,7 @@ const Section9 = () => {
             />
           </div>
         </div>
-        <CommonImage
+        <CommonImageLunarGateway
           width='200px'
           height='200px'
           src='./assets/lunargateway.png'
