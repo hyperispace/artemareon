@@ -126,13 +126,13 @@ const Intro = () => {
         <div className='content absolute h-full w-full flex flex-col items-start justify-center p-14'>
           <h1
             ref={headingRef}
-            className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-starJedi'
+            className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-white font-bold leading-snug font-starJedi'
           >
             The Beginning of a Giant Leap for Mankind
           </h1>
           <p
             ref={paragraphRef}
-            className='w-[65ch] px-10 rounded-md text-[1.25rem] text-white tracking-wide leading-relaxed font-openSans'
+            className='w-[65ch] px-10 rounded-md text-[1.25rem]  text-green-500 tracking-wide leading-relaxed font-openSans'
           >
             Let&lsquo;s take one small step for man, and one giant leap for
             mankind, as we venture into the vast expanse of outer space

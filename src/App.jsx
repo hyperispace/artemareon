@@ -17,6 +17,7 @@ import Section3_2 from './components/Section3_2';
 import Section9 from './components/Section9';
 import Section6 from './components/Section6';
 import Section11 from './components/Section11/Section11';
+import Section7 from './components/Section7';
 
 /**
  * Push your sections into this array
@@ -30,7 +31,7 @@ const sections = [
   {
     title: 'Event 1',
     isEvent: false,
-    classes: 'text-white text-5xl flex justify-center items-center h-[80%]',
+    classes: 'text-white text-5xl flex justify-center items-center h-screen',
     component: <Section0 />,
   },
   {
@@ -98,8 +99,9 @@ const sections = [
     title: 'One Small Step',
     isEvent: true,
     timeline_picture: './assets/timeline-lunar.png',
-    classes: 'text-white text-5xl flex justify-center items-center',
-    component: <>One Small Step</>,
+    classes:
+      'flex justify-center items-center relative overflow-hidden h-screen',
+    component: <Section7 />,
   },
   {
     // SECTION 8
@@ -146,7 +148,7 @@ const App = () => {
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      <Intro />
+      {/* <Intro /> */}
       <main className='w-full h-full'>
         {sections.map(({ classes, component, id }, index) => (
           <section

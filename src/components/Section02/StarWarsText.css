@@ -1,10 +1,10 @@
 .section02-crawl {
   font-size: 3vw;
   bottom: 0;
-  height: 200rem;
+  height: 80rem;
   left: 50%;
   position: absolute;
-  transform: translateX(-50%) perspective(500px) rotateX(28deg);
+  transform: translateX(-50%) perspective(300px) rotateX(28deg);
   transform-origin: 50% 100%;
   width: 90%;
   overflow: hidden;
