@@ -1,14 +1,45 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+
 import SubHeadings from '../common/SubHeadings';
 import InfoBox from '../common/InfoBox';
-import CommonImage from '../common/CommonImage';
 
 const Section3_2 = () => {
+  const imageRef = useRef(null);
+  useGSAP(() => {
+    if (!imageRef.current) return;
+    gsap.set(imageRef.current, {
+      top: '33%',
+      right: '-24%',
+      opacity: 0,
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top 80%',
+          end: 'bottom 80%',
+          scrub: true,
+        },
+      })
+      .to(imageRef.current, {
+        top: '33%',
+        right: '9%',
+        scale: 2,
+        transformOrigin: 'right center',
+        opacity: 1,
+        duration: 2,
+        ease: 'power1.inOut',
+      });
+  }, []);
   return (
     <>
-      {/* <div className='panel relative w-full h-full flex flex-col items-start justify-evenly pt-5'> */}
-      <div className='panel relative w-full h-full pt-5 grid'>
-        <SubHeadings title='Valentina Tereshkova: The First Woman in Space' />
-        <div className='w-[30vw] h-full flex justify-start items-start absolute left-[8vw] top-[20vh]'>
+      <div className='panel relative w-full h-full grid grid-rows-[4rem_1fr] grid-cols-2'>
+        <div className='col-span-2'>
+          <SubHeadings title='Valentina Tereshkova: The First Woman in Space' />
+        </div>
+        <div className='w-[30vw] h-full flex justify-start items-start absolute left-[10vw] top-[20vh]'>
           <div className='w-[30vw]'>
             <InfoBox
               title='Valentina Tereshkova'
@@ -16,13 +47,12 @@ const Section3_2 = () => {
             />
           </div>
         </div>
-
-        <CommonImage
+        <img
+          ref={imageRef}
+          src='./assets/Valentina.jpg'
           width='180px'
           height='240px'
-          classes='rounded-lg place-self-end'
-          src='./assets/Valentina.jpg'
-          direction='right'
+          className='absolute rounded-lg'
         />
       </div>
     </>
