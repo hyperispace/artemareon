@@ -16,7 +16,7 @@ function StarWarsText() {
         start: 'top top',
         end: 'bottom top',
         scrub: 2,
-        markers: true,
+        markers: false,
       },
     });
 
