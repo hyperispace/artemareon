@@ -12,8 +12,8 @@ const CommonImage = ({ src, width, height, classes }) => {
       .timeline({
         scrollTrigger: {
           trigger: imageRef.current,
-          start: 'top 80%',
-          end: 'bottom 20%',
+          start: 'top center',
+          end: 'center 20%',
           scrub: true,
         },
       })
