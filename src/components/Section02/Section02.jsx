@@ -6,12 +6,12 @@ import SubHeadings from '../common/SubHeadings';
 
 const Section02 = () => {
   return (
-    <section className='section02-background'>
+    <div className='section02-background'>
       <Heading title='The First Living Being in Space' />
       <SubHeadings title='Sputnik 2' />
       <LaikaImg />
       <StarWarsText />
-    </section>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ const Section4 = () => {
   const sectionRef = useRef(null);
 
   return (
-    <section className='background h-full' ref={sectionRef}>
+    <div className='background h-full' ref={sectionRef}>
       <Heading title='A Historic First' />
       <SubHeadings title='Alexei Leonov: The First Human to Walk in Space' />
       <Earth style={{ position: 'absolute' }} />
@@ -29,7 +29,7 @@ const Section4 = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
