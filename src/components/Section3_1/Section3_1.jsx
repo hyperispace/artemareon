@@ -15,7 +15,12 @@ const Section3_1 = () => {
           title='Yuri Gagarin'
           text='On April 12, 1961, Yuri Gagarin, a Soviet cosmonaut, made history by becoming the first human to journey into outer space. His mission aboard Vostok 1 was a major milestone in the space race. Vostok 1 lifted off from the Baikonur Cosmodrome. Gagarin&#39;s historic flight lasted 108 minutes, completing one orbit around Earth.As Vostok 1 launched, Gagarin famously exclaimed, "Poyekhali!" (Let&#39;s go!). These words became iconic, symbolizing the beginning of human space exploration.'
         />
-        <CommonImage width='200px' height='200px' src='./assets/Gagarin.jpg' />
+        <CommonImage
+          width='180px'
+          height='240px'
+          src='./assets/Gagarin.jpg'
+          classes='rounded-lg'
+        />
       </section>
     </>
   );
