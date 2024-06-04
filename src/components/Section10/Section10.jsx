@@ -26,9 +26,10 @@ const Section10 = () => {
           ease: 'power1.inOut',
           scrollTrigger: {
             trigger: sectionElement,
-            start: 'top 100%', // Adjust as needed
-            end: '40% 10%', // Adjust as needed
+            start: 'top 10%', // Adjust as needed
+            end: '40% 20%', // Adjust as needed
             scrub: true,
+            markers: true,
           },
         },
       );
