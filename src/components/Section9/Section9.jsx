@@ -12,10 +12,14 @@ const Section9 = () => {
           <Heading title='Lunar Gateway' />
           <SubHeadings title='Building the Infrastructure for Interplanetary Travel' />
         </div>
-        <InfoBox
-          title='Lunar Gateway'
-          text='Is a planned space station that will orbit the Moon, serving as a staging point for lunar exploration and as a gateway to deep space destinations like Mars. It will be assembled in lunar orbit over several missions.Crewed missions to Lunar Gateway will enable astronauts to conduct lunar surface expeditions, test technologies for future Mars missions, and explore the Moon&#39;s unique environment, including its resources and potential for sustained habitation'
-        />
+        <div className=' w-full h-full flex justify-center items-center absolute'>
+          <div className=' w-[40vw]'>
+            <InfoBox
+              title='Lunar Gateway'
+              text='Is a planned space station that will orbit the Moon, serving as a staging point for lunar exploration and as a gateway to deep space destinations like Mars. It will be assembled in lunar orbit over several missions.Crewed missions to Lunar Gateway will enable astronauts to conduct lunar surface expeditions, test technologies for future Mars missions, and explore the Moon&#39;s unique environment, including its resources and potential for sustained habitation'
+            />
+          </div>
+        </div>
         <CommonImage
           width='200px'
           height='200px'

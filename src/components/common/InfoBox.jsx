@@ -51,7 +51,7 @@ const InfoBox = ({ title, text }) => {
   return (
     <div className='typewriter-box'>
       <h2 className='typewriter-title font-speedy'>{title}</h2>
-      <p className='typewriter font-openSans' ref={textRef}>
+      <p className='typewriter font-openSans font-normal' ref={textRef}>
         {text}
       </p>
     </div>

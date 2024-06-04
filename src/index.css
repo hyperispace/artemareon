@@ -49,7 +49,7 @@
   h1 {
     font-size: 2.125rem;
     letter-spacing: 5px;
-    font-family: 'StarJedi';
+    font-family: 'StarJedi', sans-serif;
   }
 
   h2 {

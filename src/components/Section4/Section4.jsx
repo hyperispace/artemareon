@@ -21,7 +21,7 @@ const Section4 = () => {
       <SubHeadings title='Alexei Leonov: The First Human to Walk in Space' />
       <Earth style={{ position: 'absolute' }} />
       <Astronaut />
-      <div className=' w-full h-full flex justify-end items-start absolute right-[10vw] top-[40vh]'>
+      <div className=' w-full h-full flex justify-end items-start absolute right-[15vw] top-[40vh]'>
         <div className=' w-[30vw]'>
           <InfoBox
             title='First space walk'

@@ -62,8 +62,8 @@ const Section5 = () => {
           marginLeft: '23rem',
         }}
       />
-      <div className=' w-full h-full flex justify-end items-start absolute right-[10vw] top-[30vh]'>
-        <div className=' w-[30vw]'>
+      <div className=' w-full h-full flex justify-end items-start absolute right-[20vw] top-[35vh]'>
+        <div className=' w-[25vw]'>
           <InfoBox
             title='Apollo 8'
             text="In December 1968, Apollo 8 carried the first humans around the Moon, with crew members Frank Borman, James Lovell, and William Anders. They were the first to see the Moon's far side. William Anders took the iconic [Earthrise] photo, showing Earth above the lunar horizon. This mission showcased NASA's capabilities and paved the way for the lunar landing."
