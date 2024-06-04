@@ -1,17 +1,18 @@
 .typewriter-box {
+  /* display: block; */
   position: absolute;
   /* top: 120px;
   right: 100px; */
-  top: 30vh;
-  right: 10vw;
+  /* top: 30vh;
+  right: 10vw; */
   padding: 20px;
   border: 3px solid #736c6c;
   border-radius: 20px;
   background-color: rgba(33, 32, 32, 0.8);
   color: #00ff0089;
-  width: 40vw;
+  /* width: 40vw; */
   height: fit-content;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

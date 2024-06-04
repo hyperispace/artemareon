@@ -27,7 +27,7 @@ const InfoBox = ({ title, text }) => {
         scrollTrigger: {
           trigger: typetext,
           start: 'top 75%', // Adjust this value for start
-          end: 'bottom 60%', // Adjust this value for end
+          end: 'bottom 30%', // Adjust this value for end
           scrub: true,
           //   markers: true,
         },
