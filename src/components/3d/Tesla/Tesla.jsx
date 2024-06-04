@@ -1,14 +1,17 @@
-import React, { useRef, useEffect, useState, Suspense } from "react";
-import { useGLTF } from "@react-three/drei";
-import { Canvas, useFrame } from "@react-three/fiber";
-import * as THREE from "three";
-import { Environment, OrbitControls } from "@react-three/drei";
-import { gsap } from "gsap";
+/* eslint-disable react/no-unknown-property */
+import { useRef, useEffect, useState, Suspense } from 'react';
+import { useGLTF } from '@react-three/drei';
+import { Canvas, useFrame } from '@react-three/fiber';
+import * as THREE from 'three';
+import { Environment, OrbitControls } from '@react-three/drei';
+import { gsap } from 'gsap';
+
+useGLTF.preload('./assets/models/tesla/model.gltf');
 
 const Model = (props) => {
   const model = useRef();
-  const { nodes, materials } = useGLTF('./src/components/3d/tesla/model.gltf');
-  
+  const { nodes, materials } = useGLTF('./assets/models/tesla/model.gltf');
+
   // Headlight animation
   const headlight = useRef();
   const [isHeadlightOn, setIsHeadlightOn] = useState(true);
@@ -67,7 +70,9 @@ const Model = (props) => {
         <mesh
           ref={headlight}
           geometry={nodes.Body_HeadLight_0.geometry}
-          material={headlight.current ? headlight.current.material : materials.HeadLight}
+          material={
+            headlight.current ? headlight.current.material : materials.HeadLight
+          }
         />
         <mesh
           geometry={nodes.Body_RearLight_0.geometry}
@@ -94,7 +99,7 @@ const Model = (props) => {
   );
 };
 
-export default function RenderModel() {
+const Tesla = () => {
   return (
     <Canvas>
       {/* Light on model */}
@@ -109,9 +114,9 @@ export default function RenderModel() {
       </Suspense>
 
       {/* Environment reflection effect on model's body */}
-      <Environment preset="night" />
+      <Environment preset='night' />
     </Canvas>
   );
-}
+};
 
-useGLTF.preload('./src/components/3d/tesla/model.gltf');
+export default Tesla;

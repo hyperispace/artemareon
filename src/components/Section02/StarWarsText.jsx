@@ -15,15 +15,14 @@ function StarWarsText() {
         trigger: content,
         start: 'top top',
         end: 'bottom top',
-        scrub: 1,
+        scrub: 7,
         markers: false,
       },
     });
 
     tl.to(content, {
       y: '-170%',
-      duration: 2,
-      scrub: 2,
+      duration: 7,
     });
   }, []);
 

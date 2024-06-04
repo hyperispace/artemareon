@@ -1,4 +1,3 @@
-import Heading from '../common/Heading';
 import SubHeadings from '../common/SubHeadings';
 import InfoBox from '../common/InfoBox';
 import CommonImage from '../common/CommonImage';
@@ -8,7 +7,6 @@ const Section3_2 = () => {
     <>
       <section className='panel relative w-full h-full flex flex-col items-start justify-evenly pt-5'>
         <div>
-          <Heading title='Pioneers of Space' />
           <SubHeadings title='Valentina Tereshkova: The First Woman in Space' />
         </div>
         <InfoBox
@@ -17,8 +15,9 @@ const Section3_2 = () => {
         />
 
         <CommonImage
-          width='150px'
-          height='150px'
+          width='180px'
+          height='240px'
+          classes='rounded-lg'
           src='./assets/Valentina.jpg'
         />
       </section>

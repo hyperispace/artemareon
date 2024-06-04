@@ -1,16 +1,18 @@
-import React, { useRef, useEffect, useState, Suspense } from 'react';
+/* eslint-disable react/no-unknown-property */
+import { useRef, Suspense } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import { Canvas } from '@react-three/fiber';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { OrbitControls } from '@react-three/drei';
 import { gsap } from 'gsap';
 
 gsap.registerPlugin(MotionPathPlugin);
 
+useGLTF.preload('./assets/models/moon/model.gltf');
+
 const Model = (props) => {
   const model = useRef();
-  const { nodes, materials } = useGLTF('./src/components/3d/moon/model.gltf');
+  const { nodes, materials } = useGLTF('./assets/models/moon/model.gltf');
 
   // Meshes
   return (
@@ -54,8 +56,7 @@ const Model = (props) => {
   );
 };
 
-export default function RenderModel(props) {
-
+const Moon = () => {
   return (
     <>
       <Canvas>
@@ -79,6 +80,6 @@ export default function RenderModel(props) {
       </Canvas>
     </>
   );
-}
+};
 
-useGLTF.preload('./src/components/3d/moon/model.gltf');
+export default Moon;

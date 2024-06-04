@@ -6,13 +6,14 @@ import Heading from '../common/Heading';
 import './Section10.css';
 import MarsInfoText from './MarsInfoText';
 import SubHeadings from '../common/SubHeadings';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section10 = () => {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const sectionElement = sectionRef.current;
 
     if (sectionElement) {
@@ -20,15 +21,14 @@ const Section10 = () => {
         sectionElement,
         { backgroundColor: 'rgba(0, 0, 0, 0)' }, // Initial background color
         {
-          backgroundColor: 'rgba(193, 68, 14, 0.7)', // Target background color
-          duration: 1,
+          backgroundColor: 'rgba(193, 68, 14, 0.5)', // Target background color
+          duration: 0.3,
           ease: 'power1.inOut',
           scrollTrigger: {
             trigger: sectionElement,
-            start: 'top bottom', // Adjust as needed
-            end: 'bottom center', // Adjust as needed
+            start: 'top 100%', // Adjust as needed
+            end: '40% 10%', // Adjust as needed
             scrub: true,
-            markers: false,
           },
         },
       );
