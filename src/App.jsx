@@ -55,7 +55,6 @@ const sections = [
     classes: 'flex w-full h-full justify-start items-start',
     component: <Section3_1 />,
   },
-
   {
     // SECTION 3.2
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.6krekl9614td
@@ -144,7 +143,7 @@ const App = () => {
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      {/* <Intro /> */}
+      <Intro />
       <main className='w-full h-full'>
         {sections.map(({ classes, component, id }, index) => (
           <section
