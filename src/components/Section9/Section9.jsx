@@ -7,7 +7,7 @@ import CommonImageLunarGateway from '../common/CommonImageLunarGateway';
 const Section9 = () => {
   return (
     <>
-      <section className='panel relative w-full h-full flex flex-col pt-5 items-start justify-between'>
+      <div className='panel relative w-full h-full flex flex-col pt-5 items-start justify-between'>
         <div>
           <Heading title='Lunar Gateway' />
           <SubHeadings title='Building the Infrastructure for Interplanetary Travel' />
@@ -26,7 +26,7 @@ const Section9 = () => {
           src='./assets/lunargateway.png'
         />
         <PopUpText text='Towards a Multi-Planetary Future' />
-      </section>
+      </div>
     </>
   );
 };

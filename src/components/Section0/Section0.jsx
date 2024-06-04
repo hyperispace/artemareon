@@ -24,7 +24,7 @@ const Section0 = () => {
       .to(rocketIconRef.current, { y: 250, repeat: -1, duration: 1 });
   });
   return (
-    <section className='section02-background'>
+    <div className='section02-background'>
       <div className=' flex flex-col justify-center'>
         <Heading title='Scroll Through Space History' />
         <SubHeadings title='From Early Days to Visionary Plans' />
@@ -35,7 +35,7 @@ const Section0 = () => {
       >
         <img className=' w-64' src={rocketIcon} alt='' />
       </div>
-    </section>
+    </div>
   );
 };
 

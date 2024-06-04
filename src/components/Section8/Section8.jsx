@@ -15,7 +15,7 @@ const Section5 = () => {
   const sectionRef = useRef(null);
 
   return (
-    <section className='background' ref={sectionRef}>
+    <div className='background' ref={sectionRef}>
       <Heading title='Space Oddity' />
       <SubHeadings title="The Tesla Roadster's Journey Beyond Earth" />
       <Tesla />
@@ -27,7 +27,7 @@ const Section5 = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
