@@ -125,7 +125,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.emyklo4l5an1
     title: 'The Red Frontier',
     isEvent: true,
-    classes: 'relative  flex flex-col items-start h-[140%]',
+    classes: 'relative  flex flex-col items-start',
     component: <Section10 />,
   },
   {

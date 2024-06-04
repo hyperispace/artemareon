@@ -29,7 +29,7 @@ const Section10 = () => {
             start: 'top 10%', // Adjust as needed
             end: '40% 20%', // Adjust as needed
             scrub: true,
-            markers: true,
+            markers: false,
           },
         },
       );
