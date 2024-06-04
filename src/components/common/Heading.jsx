@@ -12,17 +12,17 @@ const Heading = ({ title }) => {
     if (headingElement) {
       gsap.fromTo(
         headingElement,
-        { opacity: 0, scale: 0.5 },
+        { opacity: 0, x: -100 },
         {
           opacity: 1,
-          scale: 1,
+          x: 0,
           duration: 0.2,
           ease: 'power2.inOut',
           scrollTrigger: {
             trigger: headingElement,
             start: 'top 110%', // Adjust this value
             end: 'bottom top', // Adjust this value
-            scrub: true,
+            scrub: 1,
             markers: false,
           },
         },
