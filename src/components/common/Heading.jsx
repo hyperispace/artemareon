@@ -20,7 +20,7 @@ const Heading = ({ title }) => {
           ease: 'power2.inOut',
           scrollTrigger: {
             trigger: headingElement,
-            start: 'top 110%', // Adjust this value
+            start: 'top center', // Adjust this value
             end: 'bottom top', // Adjust this value
             scrub: 1,
             markers: false,
