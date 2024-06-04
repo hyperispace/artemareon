@@ -121,7 +121,7 @@ const Intro = () => {
   }, []);
 
   return !isEntered ? (
-    <div className='absolute top-0 left-0 h-screen w-full overflow-hidden z-[50] bg-black'>
+    <section className='absolute top-0 left-0 h-screen w-full overflow-hidden z-[50] bg-black'>
       <div className=' flex justify-center items-center  z-50'>
         <div className='content absolute h-full w-full flex flex-col items-start justify-center p-14'>
           <h1
@@ -171,7 +171,7 @@ const Intro = () => {
       >
         <img className='h-full w-full object-cover' src={familyPhoto} alt='' />
       </div>
-    </div>
+    </section>
   ) : null;
 };
 
