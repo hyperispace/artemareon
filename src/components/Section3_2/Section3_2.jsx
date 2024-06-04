@@ -17,7 +17,6 @@ const Section3_2 = () => {
     gsap
       .timeline({
         scrollTrigger: {
-          markers: true,
           trigger: imageRef.current,
           start: 'top 80%',
           end: 'bottom 80%',
@@ -30,7 +29,7 @@ const Section3_2 = () => {
         scale: 2,
         transformOrigin: 'right center',
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: 'power1.inOut',
       });
   }, []);

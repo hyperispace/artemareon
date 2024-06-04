@@ -19,8 +19,6 @@ const Section3_1 = () => {
       .timeline({
         scrollTrigger: {
           trigger: imageRef.current,
-          // start: 'top center',
-          // end: 'center 20%',
           start: 'top 80%',
           end: 'bottom 80%',
           scrub: true,
@@ -32,7 +30,7 @@ const Section3_1 = () => {
         scale: 2,
         transformOrigin: 'center',
         opacity: 1,
-        duration: 3,
+        duration: 2,
         ease: 'power1.inOut',
       });
   }, []);
