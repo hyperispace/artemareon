@@ -16,27 +16,28 @@ const Section11 = () => {
     const textElement = textRef.current;
 
     if (videoElement && textElement) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: videoElement,
-          start: 'top center', // Adjust as needed
-        },
-      });
-
-      // Add video play action to timeline
-      tl.add(() => {
-        videoElement.play();
-      }).to(videoElement, {
-        duration: 39, // Duration of the video
-        onComplete: () => {
-          videoElement.muted = true;
-          videoElement.pause();
-          gsap.to(textElement, { autoAlpha: 1, duration: 1 }); // Show text when video finishes
-        },
-      });
-
       // Initially hide the text
       gsap.set(textElement, { autoAlpha: 0 });
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: videoElement,
+            onEnter: () => {
+              videoElement.play();
+            },
+            onLeaveBack: () => {
+              videoElement.pause();
+            },
+          },
+        })
+        .to(videoElement, {
+          duration: 39, // Duration of the video
+          onComplete: () => {
+            videoElement.muted = true;
+            videoElement.pause();
+            gsap.to(textElement, { autoAlpha: 1, duration: 1 }); // Show text when video finishes
+          },
+        });
     }
 
     return () => {
@@ -51,9 +52,6 @@ const Section11 = () => {
         className='h-full w-full object-cover'
         src={mars}
         type='video/mp4'
-        muted
-        // playsInline
-        autoPlay
       />
       <div
         ref={textRef}
