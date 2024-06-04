@@ -16,7 +16,7 @@ const Section11 = () => {
           type='video/mp4'
           autoPlay
           muted
-          loop={true}
+          // loop={true}
         />
       </div>
     </>

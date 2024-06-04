@@ -13,7 +13,7 @@ const Section0 = () => {
     startTimeline.current
       .from(
         rocketIconRef.current,
-        { opacity: 0, scale: 2, y: -50, duration: 2 },
+        { opacity: 0, scale: 2, y: -50, duration: 1 },
         '+=1',
       )
       .to(rocketIconRef.current, {
