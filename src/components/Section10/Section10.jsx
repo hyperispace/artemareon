@@ -6,13 +6,14 @@ import Heading from '../common/Heading';
 import './Section10.css';
 import MarsInfoText from './MarsInfoText';
 import SubHeadings from '../common/SubHeadings';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Section10 = () => {
   const sectionRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     const sectionElement = sectionRef.current;
 
     if (sectionElement) {
@@ -28,7 +29,6 @@ const Section10 = () => {
             start: 'top 100%', // Adjust as needed
             end: '40% 10%', // Adjust as needed
             scrub: true,
-            markers: true,
           },
         },
       );
