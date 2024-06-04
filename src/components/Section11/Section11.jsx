@@ -1,9 +1,10 @@
 import './Section11.css';
+import marsimg from '/assets/mars-surface.png';
 
 const Section11 = () => {
   return (
     <section className='section11-background'>
-      <h2>Landing Humans on Mars</h2>
+      <img className='mars-surface' src={marsimg} alt='mars surface' />
     </section>
   );
 };
