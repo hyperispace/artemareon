@@ -17,6 +17,16 @@ const Section7 = () => {
             zIndex: 400,
           }}
         />
+        <div
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            width: '100%',
+            height: '70px',
+            background:
+              'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 80%)',
+          }}
+        />
         <video
           className='h-full w-full object-cover'
           ref={walkingVideoRef}
