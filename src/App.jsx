@@ -15,6 +15,7 @@ import Section02 from './components/Section02/Section02';
 import Section3_1 from './components/Section3_1';
 import Section3_2 from './components/Section3_2';
 import Section9 from './components/Section9';
+import Section11 from './components/Section11/Section11';
 /**
  * Push your sections into this array
  * `classes`: section specific class name
@@ -120,7 +121,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.emyklo4l5an1
     title: 'The Red Frontier',
     isEvent: true,
-    classes: 'relative  flex flex-col items-start',
+    classes: 'relative  flex flex-col items-start h-[140%]',
     component: <Section10 />,
   },
   {
@@ -130,7 +131,7 @@ const sections = [
     isEvent: true,
     timeline_picture: './assets/timeline-mars.png',
     classes: 'text-white text-5xl  flex justify-center items-center',
-    component: <>Landing Humans on Mars</>,
+    component: <Section11 />,
   },
 ].map((section, index) => ({ ...section, id: index }));
 

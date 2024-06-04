@@ -20,15 +20,15 @@ const Section10 = () => {
         sectionElement,
         { backgroundColor: 'rgba(0, 0, 0, 0)' }, // Initial background color
         {
-          backgroundColor: 'rgba(193, 68, 14, 0.7)', // Target background color
-          duration: 1,
+          backgroundColor: 'rgba(193, 68, 14, 0.5)', // Target background color
+          duration: 0.8,
           ease: 'power1.inOut',
           scrollTrigger: {
             trigger: sectionElement,
-            start: 'top bottom', // Adjust as needed
-            end: 'bottom center', // Adjust as needed
+            start: 'top 80%', // Adjust as needed
+            end: '40% top', // Adjust as needed
             scrub: true,
-            markers: false,
+            markers: true,
           },
         },
       );
