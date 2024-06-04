@@ -7,7 +7,7 @@
   transform: translateX(-50%) perspective(300px) rotateX(28deg);
   transform-origin: 50% 100%;
   width: 90%;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .section02-content {
@@ -24,7 +24,6 @@
   transform: scale(1, 1.5);
   text-align: center;
   color: rgb(229, 177, 58);
-  overflow: hidden;
 }
 
 .section02-content p {
