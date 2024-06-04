@@ -1,15 +1,18 @@
-import React, { useRef, useEffect, useState, Suspense, forwardRef } from 'react';
+/* eslint-disable react/no-unknown-property */
+import { useRef, Suspense, forwardRef } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { OrbitControls } from '@react-three/drei';
 import { gsap } from 'gsap';
 
 gsap.registerPlugin(MotionPathPlugin);
 
+useGLTF.preload('./assets/models/earth/model.gltf');
+
 const Model = (props) => {
   const model = useRef();
-  const { nodes, materials } = useGLTF('./src/components/3d/earth/model.gltf');
+  const { nodes, materials } = useGLTF('./assets/models/earth/model.gltf');
 
   // Meshes
   return (
@@ -41,7 +44,7 @@ const Model = (props) => {
   );
 };
 
-const RenderModel = forwardRef((props, ref) => {
+const Earth = forwardRef((props, ref) => {
   return (
     <>
       <Canvas ref={ref} {...props}>
@@ -67,6 +70,6 @@ const RenderModel = forwardRef((props, ref) => {
   );
 });
 
-export default RenderModel;
+Earth.displayName = 'Earth';
 
-useGLTF.preload('./src/components/3d/earth/model.gltf');
+export default Earth;
