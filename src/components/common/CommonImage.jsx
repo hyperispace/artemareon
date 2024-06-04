@@ -3,11 +3,16 @@ import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
 /* eslint-disable react/prop-types */
-const CommonImage = ({ src, width, height, classes }) => {
+const CommonImage = ({ src, width, height, classes, direction = 'left' }) => {
   const imageRef = useRef(null);
   useGSAP(() => {
     if (!imageRef.current) return;
-    gsap.set(imageRef.current, { x: '-50%', y: '0%', opacity: 0 });
+    gsap.set(imageRef.current, {
+      ...(direction === 'left'
+        ? { x: '-50%', y: '0%' }
+        : { x: '150%', y: '-10%' }),
+      opacity: 0,
+    });
     gsap
       .timeline({
         scrollTrigger: {
@@ -17,10 +22,11 @@ const CommonImage = ({ src, width, height, classes }) => {
           scrub: true,
         },
       })
-      // .set({ x: '-50%', y: '0%', opacity: 0 })
       .to(imageRef.current, {
-        x: '100%',
-        y: '10%',
+        ...(direction === 'left'
+          ? { x: '100%', y: '10%' }
+          : { x: '-100%', y: '-100%' }),
+
         scale: 2,
         transformOrigin: 'center',
         opacity: 1,
