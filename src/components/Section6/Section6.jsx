@@ -71,6 +71,16 @@ const Section6 = () => {
           text="On July 20, 1969, humanity achieved one of its greatest accomplishments when Apollo 11 astronauts Neil Armstrong and Buzz Aldrin became the first humans to set foot on the Moon. This historic event marked a monumental leap forward in space exploration and captivated the world's imagination.The Apollo 11 Moon landing remains one of humanity's most significant achievements, inspiring generations and pushing the boundaries of what is possible. The lessons learned from this mission continue to shape our understanding of space exploration and our place in the universe."
         />
       </div>
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          width: '100%',
+          height: '70px',
+          background:
+            'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 80%)',
+        }}
+      />
     </section>
   );
 };
