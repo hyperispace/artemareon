@@ -12,10 +12,10 @@ const Heading = ({ title }) => {
     if (headingElement) {
       gsap.fromTo(
         headingElement,
-        { opacity: 0, x: -100 },
+        { opacity: 0, y: -50 },
         {
           opacity: 1,
-          x: 10,
+          y: 0,
           duration: 0.2,
           ease: 'power2.inOut',
           scrollTrigger: {
@@ -31,9 +31,9 @@ const Heading = ({ title }) => {
   }, []);
 
   return (
-    <h1 className='sub-headings' ref={subheadingsRef}>
+    <h3 className='sub-headings font-speedy' ref={subheadingsRef}>
       {title}
-    </h1>
+    </h3>
   );
 };
 

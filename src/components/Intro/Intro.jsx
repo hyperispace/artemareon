@@ -126,7 +126,7 @@ const Intro = () => {
         <div className='content absolute h-full w-full flex flex-col items-start justify-center p-14'>
           <h1
             ref={headingRef}
-            className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-poppins'
+            className='py-5 px-10 rounded-md mb-4 text-7xl w-[16ch] text-green-500 font-bold leading-snug font-starJedi'
           >
             The Beginning of a Giant Leap for Mankind
           </h1>

@@ -6,7 +6,7 @@ import CommonImage from '../common/CommonImage';
 const Section3_1 = () => {
   return (
     <>
-      <section className='panel relative w-full h-full flex flex-col items-start justify-evenly pt-5'>
+      <section className='panel relative w-full h-screen flex flex-col items-start justify-evenly pt-5'>
         <div>
           <Heading title='Pioneers of Space' />
           <SubHeadings title='Yuri Gagarin: The First Human in Space' />
