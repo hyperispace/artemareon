@@ -14,7 +14,7 @@ const SputnikImage = () => {
       const imgTl = gsap.timeline({
         scrollTrigger: {
           trigger: imageElement,
-          start: 'top 90%', // Adjust this value as needed
+          start: 'top 80%', // Adjust this value as needed
           end: 'bottom 20%', // Adjust this value as needed
           scrub: true,
         },
@@ -25,10 +25,10 @@ const SputnikImage = () => {
 
       // Animate the image to move from left to right and slightly downwards
       imgTl.to(imageElement, {
-        x: '350%', // Move from left to right across the screen
+        x: '720%', // Move from left to right across the screen
         y: '30%', // Move down by 50% of its initial position
         opacity: 1,
-        duration: 2,
+        duration: 3,
         ease: 'power1.inOut',
       });
     }
