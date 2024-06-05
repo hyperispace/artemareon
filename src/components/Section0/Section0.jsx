@@ -13,15 +13,21 @@ const Section0 = () => {
     startTimeline.current
       .from(
         rocketIconRef.current,
-        { opacity: 0, scale: 2, y: -50, duration: 1 },
+        { opacity: 0, scale: 0.6, y: -50, duration: 1 },
         '+=1',
       )
+      // .to(rocketIconRef.current, {
+      //   y: 300,
+      //   duration: 1,
+      //   scale: 0.3,
+      // })
       .to(rocketIconRef.current, {
-        y: 300,
-        duration: 1,
+        y: 350,
+        repeat: -1,
+        duration: 2.5,
         scale: 0.3,
-      })
-      .to(rocketIconRef.current, { y: 250, repeat: -1, duration: 1 });
+        ease: 'bounce.out',
+      });
   });
   return (
     <div className='section02-background'>
