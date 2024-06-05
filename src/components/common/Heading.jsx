@@ -21,7 +21,7 @@ const Heading = ({ title }) => {
           scrollTrigger: {
             trigger: headingElement,
             start: 'top 110%', // Adjust this value
-            end: 'bottom top', // Adjust this value
+            end: 'center 50%', // Adjust this value
             scrub: 1,
             markers: false,
           },

@@ -1,11 +1,15 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { walking } from '../../constant/images';
+import Heading from '../common/Heading';
+import InfoBox from '../common/InfoBox';
+import MoonWalk from '../common/MoonWalk';
+import Walkimg from './MoonWalk.png';
 
 const Section7 = () => {
   const walkingVideoRef = useRef(null);
   return (
     <>
-      <div className='absolute h-screen w-full z-20'>
+      <div className=' h-screen w-full'>
         <div
           style={{
             position: 'absolute',
@@ -28,7 +32,7 @@ const Section7 = () => {
           }}
         />
         <video
-          className='h-full w-full object-cover'
+          className='absolute top-0 left-0 h-full w-full object-cover'
           ref={walkingVideoRef}
           src={walking}
           type='video/mp4'
@@ -36,6 +40,23 @@ const Section7 = () => {
           muted
           loop={true}
         />
+
+        <div className=' flex  items-center justify-start absolute pl-20 w-[40vw]  top-[50vh] '>
+          <div>
+            <InfoBox
+              title='Walking on the Moon'
+              text='The first steps. Neil Armstrong descended the ladder of the lunar module and stepped onto the lunar surface, uttering the iconic words, That’s one small step for a man, one giant leap for mankind.’ The success of Apollo 11 laid the foundation for future space explorations, endeavors including the construction of space stations, robotic exploration of other planets, and plans for human missions to Mars.'
+            />
+          </div>
+        </div>
+        <div className=' flex justify-center pt-[400px] pl-[500px] opacity-80'>
+          <MoonWalk
+            width='230px'
+            height='440px'
+            src={Walkimg}
+            classnames='flex items-center justify-center w-[30vw] h-[40vh]'
+          />
+        </div>
       </div>
     </>
   );
