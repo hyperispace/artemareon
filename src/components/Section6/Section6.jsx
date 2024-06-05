@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { moon } from '../../constant/images';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import Heading from '../common/Heading';
+
 import InfoBox from '../common/InfoBox';
 
 gsap.registerPlugin(ScrollTrigger);

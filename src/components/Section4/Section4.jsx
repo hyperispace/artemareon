@@ -1,5 +1,5 @@
 // Section4.js
-import React, { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Section4.css';
@@ -8,7 +8,6 @@ import Earth from '../3d/Earth/Earth';
 import Heading from '../common/Heading';
 import SubHeadings from '../common/SubHeadings';
 import InfoBox from '../common/InfoBox';
-import PopUpText from '../common/PopUpText';
 
 gsap.registerPlugin(ScrollTrigger);
 
