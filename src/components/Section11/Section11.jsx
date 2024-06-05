@@ -48,6 +48,18 @@ const Section11 = () => {
 
   return (
     <section className='section11-background'>
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          width: '100%',
+          height: '30px',
+          background:
+            'linear-gradient(to bottom, rgba(149, 98, 48, 0.7), rgba(149, 98, 48, 0))',
+          zIndex: 400,
+        }}
+      />
+
       <video
         ref={videoRef}
         className='h-full w-full object-cover'
