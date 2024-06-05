@@ -49,8 +49,8 @@ const Earth = forwardRef((props, ref) => {
     <>
       <Canvas ref={ref} {...props}>
         {/* Light on model */}
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-5, 20, 30]} intensity={10} />
+        <ambientLight intensity={1.5} />
+        <directionalLight position={[-5, 20, 30]} intensity={5} />
 
         {/* Controls */}
         <OrbitControls

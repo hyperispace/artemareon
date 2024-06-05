@@ -88,7 +88,7 @@ const Astronaut = () => {
   return (
     <Canvas>
       {/* Light on model */}
-      <directionalLight position={[10, 10, 3]} intensity={1} />
+      <directionalLight position={[10, 10, 3]} intensity={5} />
 
       {/* Controls */}
       <OrbitControls

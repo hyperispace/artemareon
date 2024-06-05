@@ -103,7 +103,8 @@ const Tesla = () => {
   return (
     <Canvas>
       {/* Light on model */}
-      <directionalLight position={[10, 10, 3]} intensity={1} />
+      <directionalLight position={[5, 20, 10]} intensity={5} />
+      <ambientLight intensity={1.5} />
 
       {/* Controls */}
       <OrbitControls enableZoom={false} />
