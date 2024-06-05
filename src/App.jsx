@@ -47,7 +47,7 @@ const sections = [
     // ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.woscxkgg8cfo
     title: 'The First Living Being in Space',
     isEvent: true,
-    classes: 'relative  flex flex-col items-start mt-32',
+    classes: 'relative  flex flex-col items-start ',
     component: <Section02 />,
   },
   {
