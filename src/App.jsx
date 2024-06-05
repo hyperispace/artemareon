@@ -148,7 +148,7 @@ const App = () => {
     <>
       <StarsCanvas />
       {/* SECTION 0, the intro video, ref: https://docs.google.com/document/d/1cZQQio5FPE1P0ubhuIMOD4cylDEnEDy37rf4lmy6GU8/edit#heading=h.r5hwvakbnzcb */}
-      <Intro />
+      {/* <Intro /> */}
       <main className='w-full h-full'>
         {sections.map(({ classes, component, id }, index) => (
           <section
