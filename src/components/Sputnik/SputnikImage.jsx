@@ -41,7 +41,7 @@ const SputnikImage = () => {
     <>
       <div ref={imageRef}>
         <img className='sputnik' src={image} alt='sputnik' />
-        <p className='text-white'>Its beeps echoed worldwide</p>
+        <p className='text-white ml-24 blink'>Its beeps echoed worldwide</p>
       </div>
     </>
   );
