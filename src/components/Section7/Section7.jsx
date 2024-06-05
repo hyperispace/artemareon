@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { walking } from '../../constant/images';
-import Heading from '../common/Heading';
+
 import InfoBox from '../common/InfoBox';
 import MoonWalk from '../common/MoonWalk';
 import Walkimg from './MoonWalk.png';
