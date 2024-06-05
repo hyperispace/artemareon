@@ -1,5 +1,5 @@
 // Section5.js
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Section8.css';
@@ -7,7 +7,6 @@ import Tesla from '../3d/Tesla/Tesla';
 import Heading from '../common/Heading';
 import SubHeadings from '../common/SubHeadings';
 import InfoBox from '../common/InfoBox';
-import PopUpText from '../common/PopUpText';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,11 +14,11 @@ const Section5 = () => {
   const sectionRef = useRef(null);
 
   return (
-    <div className='background' ref={sectionRef}>
+    <div className='background select-none' ref={sectionRef}>
       <Heading title='Space Oddity' />
       <SubHeadings title="The Tesla Roadster's Journey Beyond Earth" />
       <Tesla />
-      <div className=' w-full h-full flex justify-end items-start absolute right-[10vw] top-[30vh]'>
+      <div className=' w-full h-full flex justify-end items-start absolute right-[10vw] top-[30vh] pointer-events-none'>
         <div className=' w-[30vw]'>
           <InfoBox
             title='Apollo 8'

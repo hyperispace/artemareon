@@ -101,7 +101,7 @@ const Model = (props) => {
 
 const Tesla = () => {
   return (
-    <Canvas>
+    <Canvas className='select-all cursor-pointer'>
       {/* Light on model */}
       <directionalLight position={[10, 10, 3]} intensity={1} />
 
