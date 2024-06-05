@@ -68,7 +68,7 @@ const Section11 = () => {
       />
       <div
         ref={textRef}
-        className='hidden-text absolute h-full w-full flex justify-center items-center z-30 font-speedy'
+        className='hidden-text absolute h-full w-full flex justify-center items-center z-30 font-speedy text-center'
       >
         Are you ready to join the next giant leap for humanity? Mars awaits you!
       </div>
