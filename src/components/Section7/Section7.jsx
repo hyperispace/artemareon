@@ -41,7 +41,7 @@ const Section7 = () => {
           loop={true}
         />
 
-        <div className=' flex  items-center justify-start absolute pl-20 w-[40vw]  top-[50vh] '>
+        <div className=' flex  items-center justify-start absolute pl-20 w-[40vw]  top-[40vh] '>
           <div>
             <InfoBox
               title='Walking on the Moon'
