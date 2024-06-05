@@ -22,7 +22,7 @@ function StarWarsText() {
 
     tl.to(content, {
       y: '-120%',
-      duration: 4,
+      duration: 3,
     });
   }, []);
 
