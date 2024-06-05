@@ -9,7 +9,7 @@
     font-family: 'SpeedyRegular';
     src:
       local('SpeedyRegular'),
-      url('./assets/fonts/SpeedyRegular-7BLoE.ttf') format('truetype');
+      url('/fonts/SpeedyRegular-7BLoE.ttf') format('truetype');
     font-weight: normal;
   }
 
@@ -17,7 +17,7 @@
     font-family: 'StarJedi';
     src:
       local('StarJedi'),
-      url('./assets/fonts/Starjedi.ttf') format('truetype');
+      url('/fonts/Starjedi.ttf') format('truetype');
     font-weight: bold;
   }
 
