@@ -68,9 +68,9 @@ const Section11 = () => {
       />
       <div
         ref={textRef}
-        className='hidden-text absolute h-full w-full flex justify-center items-center z-30'
+        className='hidden-text absolute h-full w-full flex justify-center items-center z-30 font-speedy'
       >
-        This is the text that appears after the video finishes.
+        Are you ready to join the next giant leap for humanity? Mars awaits you!
       </div>
     </section>
   );

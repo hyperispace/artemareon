@@ -48,15 +48,15 @@ const Intro = () => {
         '-=0.5',
       )
       .fromTo(
-        buttonRef.current,
-        { opacity: 0, x: 50 },
-        { opacity: 1, x: 0, duration: 1, ease: 'power3.inOut' },
-        '-=0.5',
-      )
-      .fromTo(
         rocketRef.current,
         { opacity: 0, x: 500, y: -90 },
         { opacity: 1, x: 350, y: -90, duration: 2, ease: 'power3.inOut' },
+        '-=0.5',
+      )
+      .fromTo(
+        buttonRef.current,
+        { opacity: 0, x: 50 },
+        { opacity: 1, x: 0, duration: 1, ease: 'power3.inOut' },
         '-=0.5',
       );
 
