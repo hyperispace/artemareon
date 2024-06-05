@@ -18,20 +18,20 @@ const SputnikImage = () => {
         scrollTrigger: {
           trigger: imageElement,
           start: 'top 80%', // Adjust this value as needed
-          end: 'bottom top', // Adjust this value as needed
+          end: 'bottom center', // Adjust this value as needed
           scrub: true,
         },
       });
 
       // Set initial position and opacity of the image
-      gsap.set(imageElement, { x: '-50%', opacity: 0.7 });
+      gsap.set(imageElement, { x: -10, y: 10, opacity: 0.4 });
 
       // Animate the image to move from left to the center of the screen
       imgTl.to(imageElement, {
-        x: '0%', // Stop in the center of the screen
-        y: '0%', // Adjust if you need any vertical movement
+        x: '60%', // Stop in the center of the screen
+        y: 10, // Adjust if you need any vertical movement
         opacity: 1,
-        duration: 5, // Adjust this value as needed
+        duration: 1, // Adjust this value as needed
         ease: 'power1.inOut',
       });
     }
