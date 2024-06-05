@@ -3,8 +3,38 @@ import SubHeadings from '../common/SubHeadings';
 import PopUpText from '../common/PopUpText';
 import InfoBox from '../common/InfoBox';
 import CommonImageLunarGateway from '../common/CommonImageLunarGateway';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
 
 const Section9 = () => {
+  const imageRef = useRef(null);
+  useGSAP(() => {
+    if (!imageRef.current) return;
+    gsap.set(imageRef.current, {
+      top: '47%',
+      left: '0%',
+      opacity: 0,
+    });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top 80%',
+          end: 'bottom 80%',
+          scrub: true,
+        },
+      })
+      .to(imageRef.current, {
+        top: '47%',
+        left: '17%',
+        scale: 2,
+        transformOrigin: 'center',
+        opacity: 1,
+        duration: 2,
+        ease: 'power1.inOut',
+      });
+  }, []);
   return (
     <>
       <div className='panel relative w-full h-full flex flex-col pt-5 items-start justify-between'>
@@ -20,12 +50,19 @@ const Section9 = () => {
             />
           </div>
         </div>
-        <CommonImageLunarGateway
+        <img
+          ref={imageRef}
+          src='./assets/lunargateway.png'
+          width='180px'
+          height='240px'
+          className='absolute rounded-lg'
+        />
+        {/* <CommonImageLunarGateway
           width='200px'
           height='200px'
           src='./assets/lunargateway.png'
-        />
-        <PopUpText text='Towards a Multi-Planetary Future' />
+        /> */}
+        {/* <PopUpText text='Towards a Multi-Planetary Future' /> */}
       </div>
     </>
   );

@@ -22,6 +22,7 @@ const Section11 = () => {
         .timeline({
           scrollTrigger: {
             trigger: videoElement,
+            start: 'top center',
             onEnter: () => {
               videoElement.play();
             },
@@ -31,7 +32,7 @@ const Section11 = () => {
           },
         })
         .to(videoElement, {
-          duration: 39, // Duration of the video
+          duration: 42, // Duration of the video
           onComplete: () => {
             videoElement.muted = true;
             videoElement.pause();
